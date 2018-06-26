@@ -124,22 +124,20 @@
 			<Subsystem>Настройки</Subsystem>
 			<Role>ПолныеПрава</Role>
 			<Role>WebService</Role>
-			<CommonTemplate>Загрузка</CommonTemplate>
+			<CommonModule>РаботаСФайлами</CommonModule>
 			<XDTOPackage>ПакетXDTO1</XDTOPackage>
 			<WebService>wstest1cprof</WebService>
-			<Constant>АдресВебСервиса</Constant>
-			<Constant>ПутьКФайлу</Constant>
 			<Catalog>ВопросыИОтветы</Catalog>
 			<Catalog>Разделы</Catalog>
 			<Document>РезультатТестирования</Document>
 			<Report>ТекущийРезультатТестирования</Report>
 			<Report>Отчет1</Report>
 			<DataProcessor>Тестирование</DataProcessor>
-			<DataProcessor>Загрузка</DataProcessor>
+			<DataProcessor>ЗагрузкаОтветов</DataProcessor>
 			<DataProcessor>Подготовка</DataProcessor>
 			<DataProcessor>ТестированиеПоРазделам</DataProcessor>
 			<DataProcessor>ТестированиеПоНеправильным</DataProcessor>
-			<DataProcessor>Выгрузка</DataProcessor>
+			<DataProcessor>ВыгрузкаОтветов</DataProcessor>
 			<InformationRegister>РезультатыТестирования</InformationRegister>
 			<InformationRegister>ХранилищеНастроек</InformationRegister>
 			<InformationRegister>УникальностьГенератораСлучайныхЧисел</InformationRegister>

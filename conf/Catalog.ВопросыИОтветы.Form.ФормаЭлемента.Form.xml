@@ -112,6 +112,13 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<InputField name="Комментарий" id="52">
+			<DataPath>Объект.Комментарий</DataPath>
+			<Width>50</Width>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="54"/>
+		</InputField>
 		<PictureField name="ПолеКартинка" id="41">
 			<DataPath>РеквизитКартинка</DataPath>
 			<TitleLocation>None</TitleLocation>

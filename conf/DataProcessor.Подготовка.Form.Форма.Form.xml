@@ -260,6 +260,13 @@
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="Комментарий" id="102">
+			<DataPath>ТекущийВопрос.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="103"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="104"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

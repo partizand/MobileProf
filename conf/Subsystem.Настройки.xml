@@ -15,12 +15,10 @@
 			<Explanation/>
 			<Picture/>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресВебСервиса</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПутьКФайлу</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВопросыИОтветы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Разделы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Выгрузка</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Загрузка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаОтветов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗагрузкаОтветов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ХранилищеНастроек</xr:Item>
 			</Content>
 		</Properties>

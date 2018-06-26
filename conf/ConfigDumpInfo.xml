@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Plain" version="2.4">
 	<ConfigVersions>
-		<Metadata name="Catalog.ВопросыИОтветы" id="0daab333-22e7-4dbd-ba97-457aa64a1cf5" configVersion="ea3b5bd3984e6146ad4081e29572f05800000000">
+		<Metadata name="Catalog.ВопросыИОтветы" id="0daab333-22e7-4dbd-ba97-457aa64a1cf5" configVersion="9dcd02db098ea2479d32fc967b53c30c00000000">
 			<Metadata name="Catalog.ВопросыИОтветы.TabularSection.Ответы" id="4ab4d33d-fced-4135-8d50-98d43bf95e77"/>
 			<Metadata name="Catalog.ВопросыИОтветы.TabularSection.Ответы.Attribute.НомерОтвета" id="8e5c5c8c-e121-4d29-99ca-55db51fc97fb"/>
 			<Metadata name="Catalog.ВопросыИОтветы.Attribute.ХранилищеКартинки" id="934c85fb-812a-419c-9837-c23d69a830fc"/>
 			<Metadata name="Catalog.ВопросыИОтветы.Attribute.НомерВопроса" id="93508ee8-afd9-4281-b035-d25fb02c6383"/>
 			<Metadata name="Catalog.ВопросыИОтветы.TabularSection.Ответы.Attribute.ЭтоПравильный" id="b40b9ff9-bbe0-4edc-b1c9-e13194139a74"/>
 			<Metadata name="Catalog.ВопросыИОтветы.Attribute.Вопрос" id="c5dd393d-647a-4a5d-a526-f04279e618e4"/>
+			<Metadata name="Catalog.ВопросыИОтветы.Attribute.Комментарий" id="c71c4ef5-11ee-4186-a9b4-794371b0251b"/>
 			<Metadata name="Catalog.ВопросыИОтветы.TabularSection.Ответы.Attribute.Ответ" id="d1a89574-34cf-46a5-ad81-bdca800627d2"/>
 		</Metadata>
 		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаВыбора" id="d30aa6c4-1a02-48bd-ba0e-3cd33ea2e725" configVersion="761b3b3eaec5b14793a68f12d66566ae00000000"/>
 		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаВыбора.Form" id="d30aa6c4-1a02-48bd-ba0e-3cd33ea2e725.0" configVersion="62571f36f2ce3641a198ead0fa1b331a00000000"/>
 		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаСписка" id="ca647995-5a47-4e46-a9a9-31154f12f9cf" configVersion="347e9334aa4da6478d7ffad80052233b00000000"/>
 		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаСписка.Form" id="ca647995-5a47-4e46-a9a9-31154f12f9cf.0" configVersion="1782769ddf380647b7a1e51c5ee9c23600000000"/>
-		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаЭлемента" id="479b54c9-2dfb-44ac-8073-63e8b14e6df0" configVersion="fb1498e8451b5f4c98edd929499cac6d00000000"/>
-		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаЭлемента.Form" id="479b54c9-2dfb-44ac-8073-63e8b14e6df0.0" configVersion="bb66e2c1f06beb4a80ba65e7a7b6f1dc00000000"/>
+		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаЭлемента" id="479b54c9-2dfb-44ac-8073-63e8b14e6df0" configVersion="8e5de8788ee3984aa3837efcce99e47900000000"/>
+		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаЭлемента.Form" id="479b54c9-2dfb-44ac-8073-63e8b14e6df0.0" configVersion="ebd544d3dd55274291b337c4a121ba1900000000"/>
 		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаЭлементаОбычная" id="bbedd67a-2962-42e4-a50d-90c3da6c533a" configVersion="e1eb3c6f100e614297bc409f4afa888200000000"/>
 		<Metadata name="Catalog.ВопросыИОтветы.Form.ФормаЭлементаОбычная.Form" id="bbedd67a-2962-42e4-a50d-90c3da6c533a.0" configVersion="c90ab9c1caf49943962d02a558eca18f00000000"/>
 		<Metadata name="Catalog.ВопросыИОтветы.ManagerModule" id="0daab333-22e7-4dbd-ba97-457aa64a1cf5.3" configVersion="18808aecd18ad44e82da11a78f4ca64a00000000"/>
@@ -28,38 +29,38 @@
 		<Metadata name="Catalog.Разделы.Form.ФормаСписка" id="7b91f0bf-edd1-4f45-bbf1-f098c44de239" configVersion="de008e8dc164a744a29e1ed67d24e68100000000"/>
 		<Metadata name="Catalog.Разделы.Form.ФормаСписка.Form" id="7b91f0bf-edd1-4f45-bbf1-f098c44de239.0" configVersion="d32e1f9a31342341a03cb24b93bbfbd900000000"/>
 		<Metadata name="Catalog.Разделы.ManagerModule" id="c925219e-4ffb-40d0-baf4-43591f8b3e5e.3" configVersion="797c81061f24e540a25326ad55119c4b00000000"/>
-		<Metadata name="CommonTemplate.Загрузка" id="adea6534-b03d-4d7b-94f6-4828e60cd801" configVersion="f04e4116521d2d4bbad1e03f046a8b6700000000"/>
-		<Metadata name="CommonTemplate.Загрузка.Template" id="adea6534-b03d-4d7b-94f6-4828e60cd801.0" configVersion="b7447aa2229d5640ba8f1c629cb9406900000000"/>
-		<Metadata name="Configuration.Конфигурация" id="3994b1bd-d884-49e3-9d45-1392ae435c97" configVersion="dbaee3966902d84a8f8d9fdbd945028600000000"/>
-		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944.8" configVersion="2f06089e6828c844a214d05b9f62e53000000000"/>
-		<Metadata name="Constant.АдресВебСервиса" id="8aa5f053-5f94-4a2f-9f91-cc11b8a63f52" configVersion="4174712cfcf76649b11234ff9455095000000000"/>
-		<Metadata name="Constant.ПутьКФайлу" id="45b98dcc-3490-43ed-9c2c-5642e5599915" configVersion="fe296ea1acc9cf479d4d4b852a1d2a3a00000000"/>
-		<Metadata name="DataProcessor.Выгрузка" id="e838db64-a1c7-44a1-9125-1cc2392ffdf0" configVersion="d9dd878fc2080a44a80ca188f2774b9600000000"/>
-		<Metadata name="DataProcessor.Выгрузка.Form.Форма" id="1f4f1f2f-63ab-4338-8c61-844a6d025085" configVersion="37c1116306d8024fafcf15c55d7bbef700000000"/>
-		<Metadata name="DataProcessor.Выгрузка.Form.Форма.Form" id="1f4f1f2f-63ab-4338-8c61-844a6d025085.0" configVersion="549cd634472e7a49a268615f23fbfb4000000000"/>
-		<Metadata name="DataProcessor.Загрузка" id="14c3bede-a41c-4e77-9d61-682bf25d747c" configVersion="9fdc9700dfef4a4bbd4962d62b3055bb00000000"/>
-		<Metadata name="DataProcessor.Загрузка.Form.Форма" id="aa07bc20-04a5-4ea1-844a-411f504695d3" configVersion="efd11641a3fcf74dbf819b5377786d7d00000000"/>
-		<Metadata name="DataProcessor.Загрузка.Form.Форма.Form" id="aa07bc20-04a5-4ea1-844a-411f504695d3.0" configVersion="9e11770ccdf6e04cb82112be192ef37c00000000"/>
+		<Metadata name="CommonModule.РаботаСФайлами" id="f400c3d8-7a2b-4114-9dd7-aee4c03ce6e3" configVersion="364d611ef556194da03498e17f56f65000000000"/>
+		<Metadata name="CommonModule.РаботаСФайлами.Module" id="f400c3d8-7a2b-4114-9dd7-aee4c03ce6e3.0" configVersion="23d0a751dd349c408911c9189dff378d00000000"/>
+		<Metadata name="Configuration.Конфигурация" id="3994b1bd-d884-49e3-9d45-1392ae435c97" configVersion="843a7a5a08017d47a1e1607c009116d900000000"/>
+		<Metadata name="Configuration.Конфигурация.HomePageWorkArea" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944.8" configVersion="d4f2e370b96bff4d82affc64a1f6829d00000000"/>
+		<Metadata name="Configuration.Конфигурация.MainSectionCommandInterface" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944.9" configVersion="94249d34f5631b4999f3883f2bfb207800000000"/>
+		<Metadata name="DataProcessor.ВыгрузкаОтветов" id="e838db64-a1c7-44a1-9125-1cc2392ffdf0" configVersion="c732bd4a71d9d742a76ae5811995610f00000000"/>
+		<Metadata name="DataProcessor.ВыгрузкаОтветов.Form.Форма" id="1f4f1f2f-63ab-4338-8c61-844a6d025085" configVersion="14d483279861a840b50a3cd042fbdbc300000000"/>
+		<Metadata name="DataProcessor.ВыгрузкаОтветов.Form.Форма.Form" id="1f4f1f2f-63ab-4338-8c61-844a6d025085.0" configVersion="17dab9f590ff584e8358d68b86b37e1900000000"/>
+		<Metadata name="DataProcessor.ЗагрузкаОтветов" id="14c3bede-a41c-4e77-9d61-682bf25d747c" configVersion="21254b812e031841b71f4e42b8e0c17700000000"/>
+		<Metadata name="DataProcessor.ЗагрузкаОтветов.Form.Форма" id="aa07bc20-04a5-4ea1-844a-411f504695d3" configVersion="66b67e0a4ca0004c8208922c9a502ca900000000"/>
+		<Metadata name="DataProcessor.ЗагрузкаОтветов.Form.Форма.Form" id="aa07bc20-04a5-4ea1-844a-411f504695d3.0" configVersion="0cb5fb6af0b8cd4d93b85e6e84fc57dc00000000"/>
 		<Metadata name="DataProcessor.Подготовка" id="40f74f68-aae5-4a8c-90e6-24ff813223eb" configVersion="64e13900bc28fd4f863fce9b6122048a00000000"/>
-		<Metadata name="DataProcessor.Подготовка.Form.Форма" id="50282d40-ab47-4e7e-a19a-ce302776717a" configVersion="8ab98c5aab133940a794673f1691332900000000"/>
-		<Metadata name="DataProcessor.Подготовка.Form.Форма.Form" id="50282d40-ab47-4e7e-a19a-ce302776717a.0" configVersion="f756d9feee326848a139663e5d93d1cd00000000"/>
-		<Metadata name="DataProcessor.Тестирование" id="3c148a8e-8120-421f-8d92-c47467200ac2" configVersion="aef9f0dc19b2af48b421e6230c7b09a300000000">
+		<Metadata name="DataProcessor.Подготовка.Form.Форма" id="50282d40-ab47-4e7e-a19a-ce302776717a" configVersion="05939fd04fd9f54b8f0b3125834cc6f200000000"/>
+		<Metadata name="DataProcessor.Подготовка.Form.Форма.Form" id="50282d40-ab47-4e7e-a19a-ce302776717a.0" configVersion="7c371a5f8633044db58c0c6dedefd13100000000"/>
+		<Metadata name="DataProcessor.Тестирование" id="3c148a8e-8120-421f-8d92-c47467200ac2" configVersion="4d325dc2368e5a469ea38f0daebca58500000000">
 			<Metadata name="DataProcessor.Тестирование.TabularSection.ТаблицаВопросов.Attribute.Картинка" id="148c89b2-2e1b-4e7e-85a1-439f3d647104"/>
 			<Metadata name="DataProcessor.Тестирование.TabularSection.ТаблицаВопросов.Attribute.ПравильныйОтвет" id="30cf2cf2-3613-49db-a30a-d61dcd2896ff"/>
 			<Metadata name="DataProcessor.Тестирование.TabularSection.ТаблицаВопросов.Attribute.ТекущийОтвет" id="4e68264c-7159-4b82-97e8-2bc7311d9071"/>
 			<Metadata name="DataProcessor.Тестирование.TabularSection.ТаблицаВопросов" id="6d35dace-bf21-4e49-ac1f-ebdf7b143644"/>
 			<Metadata name="DataProcessor.Тестирование.TabularSection.ТаблицаВопросов.Attribute.Вопрос" id="bab51f9d-b35c-4c9f-83db-16331e68cba9"/>
 			<Metadata name="DataProcessor.Тестирование.TabularSection.ТаблицаВопросов.Attribute.БылаИспользованаПодсказка" id="d7c9c99b-60b3-4a11-9ecd-b08bde94f92c"/>
+			<Metadata name="DataProcessor.Тестирование.TabularSection.ТаблицаВопросов.Attribute.Комментарий" id="e9201e76-ef19-4611-860c-565d50f3dff6"/>
 		</Metadata>
-		<Metadata name="DataProcessor.Тестирование.Form.ФормаМоб" id="f080f907-2634-4072-9378-d976225943e1" configVersion="16870fb4439ef44baafec2d3da4e2c1200000000"/>
-		<Metadata name="DataProcessor.Тестирование.Form.ФормаМоб.Form" id="f080f907-2634-4072-9378-d976225943e1.0" configVersion="a1d790b0c7406f47b0e4123ea74eea7100000000"/>
+		<Metadata name="DataProcessor.Тестирование.Form.ФормаМоб" id="f080f907-2634-4072-9378-d976225943e1" configVersion="61a7d3dcb5561e42b178c829291b95d900000000"/>
+		<Metadata name="DataProcessor.Тестирование.Form.ФормаМоб.Form" id="f080f907-2634-4072-9378-d976225943e1.0" configVersion="799e8d5350d073478ea452ec66bc6dd600000000"/>
 		<Metadata name="DataProcessor.Тестирование.ObjectModule" id="3c148a8e-8120-421f-8d92-c47467200ac2.0" configVersion="35dc2ba91e8fe84d8b117a9890981bf500000000"/>
 		<Metadata name="DataProcessor.ТестированиеПоНеправильным" id="fd1b8aa3-156c-4bff-9b0d-94d9c984c86c" configVersion="608622807323454a8fe10a2aa1f7942000000000"/>
-		<Metadata name="DataProcessor.ТестированиеПоНеправильным.Form.Форма" id="9ea40d78-9e10-442e-89b1-fb10d2687916" configVersion="37b894db06bc474dbe2de16636b4debb00000000"/>
-		<Metadata name="DataProcessor.ТестированиеПоНеправильным.Form.Форма.Form" id="9ea40d78-9e10-442e-89b1-fb10d2687916.0" configVersion="1ad921ccfd4905438e9a193c66230cdb00000000"/>
+		<Metadata name="DataProcessor.ТестированиеПоНеправильным.Form.Форма" id="9ea40d78-9e10-442e-89b1-fb10d2687916" configVersion="1b9beb934884de44bf25decc8a2f6bb500000000"/>
+		<Metadata name="DataProcessor.ТестированиеПоНеправильным.Form.Форма.Form" id="9ea40d78-9e10-442e-89b1-fb10d2687916.0" configVersion="b32e69f7bba2804984a47a38dbaeb95b00000000"/>
 		<Metadata name="DataProcessor.ТестированиеПоРазделам" id="07f33c6c-266f-454c-9f05-0eda31391665" configVersion="86eb983909359248a7f941db0b16cf4400000000"/>
-		<Metadata name="DataProcessor.ТестированиеПоРазделам.Form.Форма" id="aa136c3b-3752-46fb-9d12-8cb8463a47ff" configVersion="28c6db0fc0683145ac242565f12f56aa00000000"/>
-		<Metadata name="DataProcessor.ТестированиеПоРазделам.Form.Форма.Form" id="aa136c3b-3752-46fb-9d12-8cb8463a47ff.0" configVersion="650f517cec971b44988d4faf3fc6181b00000000"/>
+		<Metadata name="DataProcessor.ТестированиеПоРазделам.Form.Форма" id="aa136c3b-3752-46fb-9d12-8cb8463a47ff" configVersion="347c3b7093a07e4d98bb3340888be73700000000"/>
+		<Metadata name="DataProcessor.ТестированиеПоРазделам.Form.Форма.Form" id="aa136c3b-3752-46fb-9d12-8cb8463a47ff.0" configVersion="c74f3d8d0cfa9842a275ed180715609b00000000"/>
 		<Metadata name="Document.РезультатТестирования" id="fa82e5dc-9d12-4f8a-9e3b-e8f60ef5d012" configVersion="90282fda20cd3f42a82d670234bfe72400000000">
 			<Metadata name="Document.РезультатТестирования.TabularSection.Ответы.Attribute.НомерОтвета" id="2b7b52f2-7416-459e-b993-555aedec2b12"/>
 			<Metadata name="Document.РезультатТестирования.TabularSection.Ответы" id="722cab67-7b70-47e7-9256-9fce92bc6378"/>
@@ -94,7 +95,7 @@
 		<Metadata name="Role.WebService.Rights" id="7aaf5a32-f8a9-40b7-b134-ffb669133933.0" configVersion="bc9ec732b07e3d4d9f3988583756232b00000000"/>
 		<Metadata name="Role.ПолныеПрава" id="010c57b8-3952-4fd3-a60b-926712e0745a" configVersion="4af10bd9da6dec408e4c6d37ed37c5e500000000"/>
 		<Metadata name="Role.ПолныеПрава.Rights" id="010c57b8-3952-4fd3-a60b-926712e0745a.0" configVersion="60ced576541f8e43ad7067b23b1e110100000000"/>
-		<Metadata name="Subsystem.Настройки" id="67b1a61d-98d0-4455-8831-a46cad9e2f1c" configVersion="8c1eeb45dc4a9b4ba60f20871898a93100000000"/>
+		<Metadata name="Subsystem.Настройки" id="67b1a61d-98d0-4455-8831-a46cad9e2f1c" configVersion="64fb5d9b5c501e44ae5e647d08505ee600000000"/>
 		<Metadata name="Subsystem.Подготовка" id="38043ec0-bfaa-4593-9e76-e4908c2a82dc" configVersion="548462d6696f0749b0803c801b465d0b00000000"/>
 		<Metadata name="Subsystem.Тестирование" id="2e039e8f-b5d4-4614-b12c-5a621ec3c1a5" configVersion="9746420331d06e46a4d9f04df244b1cc00000000"/>
 		<Metadata name="WebService.wstest1cprof" id="43825303-569c-406f-a25e-a395f3d38f73" configVersion="24ea4339c74bca46aeb89c0165acac5000000000">
