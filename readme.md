@@ -28,7 +28,7 @@
 Установка
 ---------
 
-1. Установить приложение в мобильной версии 1С по ссылкеhttps://raw.githubusercontent.com/partizand/MobileProf/master/mobileprof.xml
+1. Установить приложение в мобильной версии 1С по ссылке https://raw.githubusercontent.com/partizand/MobileProf/master/mobileprof.xml
 
 2. Запустить приложение. В настройках выбрать "Загрузка ответов". Нажать "Загрузить из файла". 
 
