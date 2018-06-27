@@ -574,18 +574,6 @@
 					</Title>
 					<ExtendedTooltip name="КомандаОтветитьРасширеннаяПодсказка" id="187"/>
 				</Button>
-				<Button name="КомандаПоказатьПравильный" id="190">
-					<Type>UsualButton</Type>
-					<Height>2</Height>
-					<CommandName>Form.Command.КомандаПоказатьПравильный</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Подсказка</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="КомандаПоказатьПравильныйРасширеннаяПодсказка" id="191"/>
-				</Button>
 				<Button name="КомандаЗавершить" id="188">
 					<Type>UsualButton</Type>
 					<Height>2</Height>
@@ -597,6 +585,18 @@
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="КомандаЗавершитьРасширеннаяПодсказка" id="189"/>
+				</Button>
+				<Button name="КомандаПоказатьПравильный" id="190">
+					<Type>UsualButton</Type>
+					<Height>2</Height>
+					<CommandName>Form.Command.КомандаПоказатьПравильный</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подсказка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомандаПоказатьПравильныйРасширеннаяПодсказка" id="191"/>
 				</Button>
 				<Button name="КомандаПредыдущийНеправильный" id="194">
 					<Type>UsualButton</Type>

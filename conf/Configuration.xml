@@ -122,11 +122,8 @@
 			<Subsystem>Тестирование</Subsystem>
 			<Subsystem>Подготовка</Subsystem>
 			<Subsystem>Настройки</Subsystem>
-			<Role>ПолныеПрава</Role>
-			<Role>WebService</Role>
 			<CommonModule>РаботаСФайлами</CommonModule>
-			<XDTOPackage>ПакетXDTO1</XDTOPackage>
-			<WebService>wstest1cprof</WebService>
+			<CommonModule>ИнтерфейсныеФункции</CommonModule>
 			<Catalog>ВопросыИОтветы</Catalog>
 			<Catalog>Разделы</Catalog>
 			<Document>РезультатТестирования</Document>

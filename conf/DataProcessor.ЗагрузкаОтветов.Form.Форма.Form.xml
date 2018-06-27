@@ -13,6 +13,7 @@
 					<v8:content>Файл или http</v8:content>
 				</v8:item>
 			</Title>
+			<TitleLocation>Top</TitleLocation>
 			<ChoiceButton>true</ChoiceButton>
 			<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="18"/>
