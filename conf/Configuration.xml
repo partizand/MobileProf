@@ -46,8 +46,8 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor/>
-			<Version>1</Version>
-			<UpdateCatalogAddress/>
+			<Version>1.0.1</Version>
+			<UpdateCatalogAddress>https://raw.githubusercontent.com/partizand/MobileProf/master/mobileprof.xml</UpdateCatalogAddress>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>true</UseManagedFormInOrdinaryApplication>
 			<UseOrdinaryFormInManagedApplication>false</UseOrdinaryFormInManagedApplication>
