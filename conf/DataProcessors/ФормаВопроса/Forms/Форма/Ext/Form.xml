@@ -51,6 +51,18 @@
 				</Title>
 				<ExtendedTooltip name="ФормаКомандСледующийРасширеннаяПодсказка" id="95"/>
 			</Button>
+			<Button name="КомандаЗавершить" id="188">
+				<Type>CommandBarButton</Type>
+				<Height>2</Height>
+				<CommandName>Form.Command.КомандаЗавершить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Завершить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КомандаЗавершитьРасширеннаяПодсказка" id="189"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -578,18 +590,6 @@
 					</Title>
 					<ExtendedTooltip name="КомандаОтветитьРасширеннаяПодсказка" id="187"/>
 				</Button>
-				<Button name="КомандаЗавершить" id="188">
-					<Type>UsualButton</Type>
-					<Height>2</Height>
-					<CommandName>Form.Command.КомандаЗавершить</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Завершить</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="КомандаЗавершитьРасширеннаяПодсказка" id="189"/>
-				</Button>
 				<Button name="КомандаПоказатьПравильный" id="190">
 					<Type>UsualButton</Type>
 					<Height>2</Height>
@@ -630,6 +630,11 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<LabelField name="НеОтвеченных" id="199">
+			<DataPath>НеОтвеченных</DataPath>
+			<ContextMenu name="НеОтвеченныхКонтекстноеМеню" id="200"/>
+			<ExtendedTooltip name="НеОтвеченныхРасширеннаяПодсказка" id="201"/>
+		</LabelField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -935,6 +940,22 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="НеОтвеченных" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не отвеченных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="КомандСледующий" id="1">
@@ -1109,6 +1130,28 @@
 		<Parameter name="ПоказатьОтвет">
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="НеОтвеченных">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ВсегоВопросов">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 			<KeyParameter>true</KeyParameter>
 		</Parameter>
