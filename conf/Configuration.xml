@@ -129,9 +129,14 @@
 			<Subsystem>Настройки</Subsystem>
 			<CommonModule>РаботаСФайлами</CommonModule>
 			<CommonModule>ИнтерфейсныеФункции</CommonModule>
+			<CommonModule>РаботаСВопросами</CommonModule>
+			<CommonForm>ФормаВопроса</CommonForm>
 			<Catalog>ВопросыИОтветы</Catalog>
 			<Catalog>Разделы</Catalog>
+			<Catalog>ТекущиеОтветы</Catalog>
 			<Document>РезультатТестирования</Document>
+			<Enum>РежимыОткрытияВопросов</Enum>
+			<Enum>ДействиеВопроса</Enum>
 			<Report>ТекущийРезультатТестирования</Report>
 			<Report>Отчет1</Report>
 			<DataProcessor>Тестирование</DataProcessor>
@@ -140,6 +145,8 @@
 			<DataProcessor>ТестированиеПоРазделам</DataProcessor>
 			<DataProcessor>ТестированиеПоНеправильным</DataProcessor>
 			<DataProcessor>ВыгрузкаОтветов</DataProcessor>
+			<DataProcessor>ТестированиеСлучайное</DataProcessor>
+			<DataProcessor>ФормаВопроса</DataProcessor>
 			<InformationRegister>РезультатыТестирования</InformationRegister>
 			<InformationRegister>ХранилищеНастроек</InformationRegister>
 			<InformationRegister>УникальностьГенератораСлучайныхЧисел</InformationRegister>

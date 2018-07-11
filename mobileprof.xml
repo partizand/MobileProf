@@ -25,6 +25,10 @@
 	</sessionModule>
 	<startPageWorkingArea>
 		<workingAreaTemplate>OneColumn</workingAreaTemplate>
+		<column>
+			<form>DataProcessor.ТестированиеСлучайное.Form.Форма</form>
+			<height>10</height>
+		</column>
 		<commandInterfaceDisplays>Top</commandInterfaceDisplays>
 	</startPageWorkingArea>
 	<subsystem name="Тестирование" id="2e039e8f-b5d4-4614-b12c-5a621ec3c1a5">
@@ -37,6 +41,7 @@
 		<content>DataProcessor.Тестирование</content>
 		<content>DataProcessor.ТестированиеПоРазделам</content>
 		<content>DataProcessor.ТестированиеПоНеправильным</content>
+		<content>DataProcessor.ТестированиеСлучайное</content>
 	</subsystem>
 	<subsystem name="Подготовка" id="38043ec0-bfaa-4593-9e76-e4908c2a82dc">
 		<synonym>
@@ -259,6 +264,269 @@
 			</bsch:procedure>
 		</clientModule>
 	</commonModule>
+	<commonModule name="РаботаСВопросами" id="3f67fc6c-cb6c-4a6f-98b3-42206b2de8b7">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Работа с вопросами</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,12,4,16,1,3,29,40,1,3,12,3,12,4,4,100,16,39,1,3,12,3,12,4,4,100,16,1,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,21,5,1,1,40,1,3,12,17,45,39,1,39,1,3,12,3,18,19,5,1,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,40,1,3,12,3,12,4,4,100,16,39,1,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,21,5,1,1,40,1,3,12,17,45,39,1,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,21,5,1,1,40,1,3,3,12,16,1,39,1,3,17,45,39,1,22,1,3,2,12,18,21,5,1,16,1,3,12,3,16,1,3,12,4,16,1,3,18,20,1,1,22,1,3,3,18,19,5,1,16,1,3,2,12,4,3,18,21,5,1,16,1,3,3,3,33,16,1,3,2,12,18,21,5,1,33,40,1,3,2,12,18,21,5,1,16,1,3,12,3,16,1,3,12,3,16,1,3,12,3,16,1,3,18,20,1,39,1,3,3,18,21,5,1,16,1,3,12,3,16,1,3,12,3,16,1,3,18,20,1,1,1,3,17,45,39,1,22,1,3,2,12,4,3,18,21,5,1,16,1,3,2,12,18,21,5,1,33,40,1,4,17,45,39,39,1,3,12,17,45,39,1,1,22,1,3,4,18,51,16,1,3,4,3,18,20,1,1,3,3,18,21,5,1,18,21,5,1,16,1,3,18,21,5,1,40,1,3,12,17,45,39,39,1,1,4,17,45,39,1,22,1,3,2,12,18,21,5,1,16,1,3,18,21,5,1,1,40,1,3,3,18,21,5,1,16,1,3,18,20,1,1,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,18,19,1,1,3,18,21,5,1,1,40,1,3,12,18,19,1,1,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,4,33,40,1,8,17,45,39,39,1,1,3,18,51,16,1,3,3,4,3,4,25,18,21,5,1,16,1,3,4,16,1,3,18,21,5,1,1,40,1,3,3,33,40,1,3,12,17,45,39,39,1,1,3,3,4,24,16,1,39,1,8,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,21,5,1,1,40,1,3,12,17,45,39,1,39,1,4,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,4,16,1,3,18,21,5,1,1,40,1,3,3,12,16,1,39,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,4,16,1,3,18,21,5,1,1,40,1,3,3,12,16,1,39,1,3,18,19,5,1,16,1,3,3,3,25,16,1,3,3,3,25,16,1,3,4,33,40,1,3,4,16,39,1,3,3,3,27,4,26,16,1,3,4,3,24,4,24,3,24,4,24,3,24,4,24,3,24,4,24,16,1,1,3,4,35,40,1,3,3,4,24,3,24,16,39,1,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>11,2,0,0,0,12,2,1,2,0,35,1,0,24,36,2,1,2,1,3,4,0,0,33,38,2,1,2,1,5,6,0,0,39,42,2,8,0,2,7,42,44,3,2,0,9,0,44,0,46,4,3,0,10,0,46,0,48,4,0,11,0,48,48,73,49,4,11,0,0,84,51,57,53,0,12,1,2,1,0,53,0,0,84,59,0,63,2,0,0,0,64,2,1,13,0,75,1,109,76,2,1,2,1,5,6,0,0,109,77,81,2,14,0,2,7,81,83,3,2,0,9,0,83,0,85,4,3,0,10,0,85,0,87,4,0,11,0,87,87,149,88,4,15,0,0,149,90,133,92,0,102,2,0,0,0,103,2,1,16,0,115,2,17,0,2,7,115,116,2,18,1,2,7,116,118,3,2,0,9,0,118,0,120,4,3,0,10,0,120,0,122,4,0,11,0,122,122,206,124,5,4,19,0,126,191,128,5,0,0,211,134,0,137,1,0,20,0,21,0,137,0,138,1,19,0,0,139,1,22,23,0,140,1,0,24,140,142,0,147,2,0,1,5,0,147,0,149,3,0,20,19,0,2,25,0,149,0,151,4,1,2,0,0,153,3,0,20,0,26,0,153,0,304,155,5,0,20,0,21,0,155,0,156,5,19,0,0,157,5,22,1,0,158,5,27,4,0,159,5,0,24,159,327,161,6,3,0,28,0,161,0,162,6,22,1,0,163,6,27,4,0,164,6,0,24,164,166,168,4,0,0,333,171,0,174,1,0,20,19,0,2,25,0,174,0,176,1,0,20,0,26,0,176,0,362,178,23,0,0,369,368,180,1,22,0,0,369,181,183,0,191,1,29,1,0,0,198,1,30,0,2,7,198,199,2,1,0,9,0,199,0,10,0,199,0,200,2,0,11,0,200,410,201,2,31,0,0,416,410,202,229,23,0,0,416,233,0,236,0,0,20,0,10,0,236,0,237,0,0,11,0,237,237,450,238,1,0,0,28,0,238,0,239,1,0,32,239,240,427,242,0,249,1,0,0,0,250,1,1,33,0,263,1,34,0,2,7,263,265,2,1,0,9,0,265,0,267,3,2,0,10,0,267,0,269,0,7,269,271,3,0,11,0,271,271,505,273,3,19,1,3,273,274,489,278,0,288,0,0,0,0,289,0,1,35,0,297,1,0,0,9,0,297,0,299,2,1,0,10,0,299,0,301,3,2,0,36,0,301,0,303,3,23,0,552,304,0,0,0,608,552,305,307,4,0,37,0,308,5,4,39,3,39,0,2,38,0,308,0,310,6,39,0,312,2,0,11,0,312,312,603,313,6,5,0,594,314,2,19,0,0,608,594,315,316,6,6,39,0,0,317,574,321,0,0,0,608,323,0,330,0,0,0,0,331,0,1,40,0,339,1,0,0,9,0,339,0,341,2,1,0,10,0,341,0,343,2,0,11,0,343,343,652,345,2,41,0,0,657,353,636,355,23,0,0,657,358,0,365,0,0,0,0,366,0,1,42,0,374,1,0,0,9,0,374,0,376,2,1,0,10,0,376,0,378,3,23,0,380,2,0,11,0,380,380,704,382,3,2,43,0,383,689,385,0,0,0,0,386,0,1,44,0,392,1,0,0,9,0,392,0,394,2,1,0,10,0,394,0,396,4,23,0,398,2,0,11,0,398,398,749,400,4,2,45,0,401,734,403,5,0,10,0,403,0,405,6,4,5,0,0,407,7,6,3,0,0,409,6,23,0,778,410,8,46,0,806,413,9,3,6,0,47,0,0,415,8,48,9,0,49,0,3,0,50,0,6,0,51,0,7,0,52,0,0,416,418,5,23,0,821,419,8,8,53,0,5,0,0,821,420,422,8,0,0,827,426,0,0</bsch:cmdOperand>
+			<bsch:constant>SЗапрос</bsch:constant>
+			<bsch:constant>SТекст</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	ВопросыИОтветы.Владелец КАК ТекущийРаздел
+ПОМЕСТИТЬ ВТ
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+ГДЕ
+	ВопросыИОтветы.Ссылка = &amp;ТекущийВопрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 1
+	ВопросыИОтветы.Ссылка КАК Следующий
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ КАК ВТ
+		ПО ВопросыИОтветы.Владелец = ВТ.ТекущийРаздел
+ГДЕ
+	ВопросыИОтветы.Ссылка &gt; &amp;ТекущийВопрос
+
+УПОРЯДОЧИТЬ ПО
+	ВопросыИОтветы.НомерВопроса УБЫВ</bsch:constant>
+			<bsch:constant>S&gt;</bsch:constant>
+			<bsch:constant>S&lt;</bsch:constant>
+			<bsch:constant>SУБЫВ</bsch:constant>
+			<bsch:constant>S</bsch:constant>
+			<bsch:constant>SУстановитьПараметр</bsch:constant>
+			<bsch:constant>SТекущийВопрос</bsch:constant>
+			<bsch:constant>SВыполнить</bsch:constant>
+			<bsch:constant>SВыбрать</bsch:constant>
+			<bsch:constant>SСледующий</bsch:constant>
+			<bsch:constant>SВладелец</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ ПЕРВЫЕ 1
+	ВопросыИОтветы.Ссылка КАК Первый
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+ГДЕ
+	ВопросыИОтветы.Владелец = &amp;ТекущийРаздел
+
+УПОРЯДОЧИТЬ ПО
+	ВопросыИОтветы.НомерВопроса УБЫВ</bsch:constant>
+			<bsch:constant>SТекущийРаздел</bsch:constant>
+			<bsch:constant>SПервый</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ ПЕРВЫЕ 1
+	ВопросыИОтветы.Ссылка КАК Вопрос,
+	Разделы.Ссылка КАК Раздел
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Разделы КАК Разделы
+		ПО ВопросыИОтветы.Владелец = Разделы.Ссылка
+ГДЕ
+	Разделы.НомерРаздела = &amp;НомерРаздела
+	И ВопросыИОтветы.НомерВопроса = &amp;НомерВопроса</bsch:constant>
+			<bsch:constant>SНомерРаздела</bsch:constant>
+			<bsch:constant>SНомерВопроса</bsch:constant>
+			<bsch:constant>SВопрос</bsch:constant>
+			<bsch:constant>SТекущиеОтветы</bsch:constant>
+			<bsch:constant>SСоздатьЭлемент</bsch:constant>
+			<bsch:constant>SОтвет</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SЗаписать</bsch:constant>
+			<bsch:constant>SНайтиПоРеквизиту</bsch:constant>
+			<bsch:constant>SПустаяСсылка</bsch:constant>
+			<bsch:constant>SПравильный</bsch:constant>
+			<bsch:constant>SПолучитьОбъект</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ ПЕРВЫЕ 1
+	ВопросыИОтветыОтветы.НомерОтвета
+ИЗ
+	Справочник.ВопросыИОтветы.Ответы КАК ВопросыИОтветыОтветы
+ГДЕ
+	ВопросыИОтветыОтветы.Ссылка = &amp;Ссылка
+	И ВопросыИОтветыОтветы.ЭтоПравильный</bsch:constant>
+			<bsch:constant>SСсылка</bsch:constant>
+			<bsch:constant>SНомерОтвета</bsch:constant>
+			<bsch:constant>SУдалить</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	ВопросыИОтветы.Ссылка КАК Вопрос
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;Раздел = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ ВопросыИОтветы.Владелец = &amp;Раздел
+		КОНЕЦ
+	И НЕ ВопросыИОтветы.ПометкаУдаления</bsch:constant>
+			<bsch:constant>SРаздел</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	ТекущиеОтветы.Вопрос
+ИЗ
+	Справочник.ТекущиеОтветы КАК ТекущиеОтветы
+ГДЕ
+	ТекущиеОтветы.Ответ = 0</bsch:constant>
+			<bsch:constant>SКоличество</bsch:constant>
+			<bsch:constant>SГенераторСлучайныхЧисел</bsch:constant>
+			<bsch:constant>SСлучайноеЧисло</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	КОЛИЧЕСТВО(*) КАК НеОтвеченных
+ИЗ
+	Справочник.ТекущиеОтветы КАК ТекущиеОтветы
+ГДЕ
+	ТекущиеОтветы.Ответ = 0</bsch:constant>
+			<bsch:constant>SНеОтвеченных</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	КОЛИЧЕСТВО(*) КАК ПравильныхКоличество
+ИЗ
+	Справочник.ТекущиеОтветы КАК ТекущиеОтветы
+ГДЕ
+	ТекущиеОтветы.Правильный</bsch:constant>
+			<bsch:constant>SПравильныхКоличество</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	КОЛИЧЕСТВО(*) КАК ВсегоКоличество
+ИЗ
+	Справочник.ТекущиеОтветы КАК ТекущиеОтветы</bsch:constant>
+			<bsch:constant>SВсегоКоличество</bsch:constant>
+			<bsch:constant>SНет ни одного ответа!</bsch:constant>
+			<bsch:constant>N100</bsch:constant>
+			<bsch:constant>SРезультат: </bsch:constant>
+			<bsch:constant>S% (</bsch:constant>
+			<bsch:constant>S из </bsch:constant>
+			<bsch:constant>S(</bsch:constant>
+			<bsch:constant>S))</bsch:constant>
+			<bsch:constant>S Неотвечено: </bsch:constant>
+			<bsch:variable name="Справочники" isExternal="true"/>
+			<bsch:procedure name="СледующийВопрос" isFunction="true" parametersCount="2" startAddr="0">
+				<bsch:variable name="ТекущийВопрос" isLocal="true" isParam="true"/>
+				<bsch:variable name="Вперед" isLocal="true" isParam="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="КрайнийВопрос" isFunction="true" parametersCount="2" startAddr="86">
+				<bsch:variable name="ТекущийРаздел" isLocal="true" isParam="true"/>
+				<bsch:variable name="Первый" isLocal="true" isParam="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьСсылкуНаВопрос" isFunction="true" parametersCount="2" startAddr="151">
+				<bsch:variable name="НомерРаздела" isLocal="true" isParam="true"/>
+				<bsch:variable name="НомерВопроса" isLocal="true" isParam="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:variable name="ТекущийВопрос" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ДобавитьВопрос" isFunction="true" parametersCount="1" startAddr="213">
+				<bsch:variable name="Вопрос" isLocal="true" isParam="true"/>
+				<bsch:variable name="НовЗапись" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ДобавитьОтвет" isFunction="true" isExported="true" parametersCount="2" startAddr="239">
+				<bsch:variable name="Вопрос" isLocal="true" isParam="true"/>
+				<bsch:variable name="Ответ" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПравильныйОтвет" isLocal="true"/>
+				<bsch:variable name="НайденныйВопрос" isLocal="true"/>
+				<bsch:variable name="Правильный" isLocal="true"/>
+				<bsch:variable name="НовыйЭлемент" isLocal="true"/>
+				<bsch:variable name="Об" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьПравильныйОтвет" isFunction="true" parametersCount="1" startAddr="371">
+				<bsch:variable name="Вопрос" isLocal="true" isParam="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="Выборка" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьОтвет" isFunction="true" isExported="true" parametersCount="1" startAddr="335">
+				<bsch:variable name="Вопрос" isLocal="true" isParam="true"/>
+				<bsch:variable name="НайденныйВопрос" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ОчиститьТекущиеВопросы" isExported="true" parametersCount="0" startAddr="418">
+				<bsch:variable name="Выборка" isLocal="true"/>
+				<bsch:variable name="Об1" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ЗаполнитьВопросыТестирования" isExported="true" parametersCount="1" startAddr="452">
+				<bsch:variable name="Раздел" isLocal="true" isParam="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="СлучайныйВопрос" isFunction="true" isExported="true" parametersCount="0" startAddr="507">
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:variable name="ВсегоВопросов" isLocal="true"/>
+				<bsch:variable name="ГСЧ" isLocal="true"/>
+				<bsch:variable name="СлучайноеЧисло" isLocal="true"/>
+				<bsch:variable name="Счетчик" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ЕстьНеОтвеченные" isFunction="true" isExported="true" parametersCount="0" startAddr="610">
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="РезультатТестирования" isFunction="true" isExported="true" parametersCount="0" startAddr="659">
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:variable name="Правильных" isLocal="true"/>
+				<bsch:variable name="ВсегоКоличество" isLocal="true"/>
+				<bsch:variable name="НеОтвеченных" isLocal="true"/>
+				<bsch:variable name="Отвеченных" isLocal="true"/>
+				<bsch:variable name="Неправильных" isLocal="true"/>
+				<bsch:variable name="Стр" isLocal="true"/>
+				<bsch:variable name="Процент" isLocal="true"/>
+			</bsch:procedure>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
+	<commonForm name="ФормаВопроса" id="fb997662-8c24-453f-bac4-83d478779681">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Форма вопроса</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:command name="Команда1"/>
+			<mf:mainElement>
+				<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+				<mf:button name="Кнопка1" type="UsualButton" commandName="Form.Command.Команда1"/>
+			</mf:mainElement>
+		</form>
+		<useStandardCommands>false</useStandardCommands>
+	</commonForm>
 	<catalog name="ВопросыИОтветы" id="0daab333-22e7-4dbd-ba97-457aa64a1cf5">
 		<synonym>
 			<v8:item>
@@ -1404,6 +1672,111 @@
 			</form>
 		</form>
 	</catalog>
+	<catalog name="ТекущиеОтветы" id="a295305f-b363-4730-ba80-e22a599f29bb">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущие ответы</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="CatalogObject.ТекущиеОтветы" category="Object">
+			<xr:TypeId>70b569e3-0ec0-45ce-8ba6-3367bcb0bd4b</xr:TypeId>
+			<xr:ValueId>e6b747c0-2cbc-4f98-9061-b90e79dd6195</xr:ValueId>
+		</generatedType>
+		<generatedType name="CatalogRef.ТекущиеОтветы" category="Ref">
+			<xr:TypeId>3eb696ad-daf0-47a3-bb13-53f2739a794f</xr:TypeId>
+			<xr:ValueId>c77090da-2e42-4623-b3e6-e452482418cf</xr:ValueId>
+		</generatedType>
+		<generatedType name="CatalogSelection.ТекущиеОтветы" category="Selection">
+			<xr:TypeId>b472a15f-0f3f-41cb-80d0-339f444f9af7</xr:TypeId>
+			<xr:ValueId>921345c5-f6ee-4825-9a5b-53397be8bb4d</xr:ValueId>
+		</generatedType>
+		<generatedType name="CatalogList.ТекущиеОтветы" category="List">
+			<xr:TypeId>d54989ed-58f6-4de3-80f7-9ea686e9b2f3</xr:TypeId>
+			<xr:ValueId>6d12598e-b764-4e75-a28f-66fa1ba14237</xr:ValueId>
+		</generatedType>
+		<generatedType name="CatalogManager.ТекущиеОтветы" category="Manager">
+			<xr:TypeId>9b151d12-d626-465b-b6ec-45c5d78f5324</xr:TypeId>
+			<xr:ValueId>202df715-4600-4653-a415-23653b2b310b</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>1,3,4,3,18,19,5,1,16,1,3,18,19,5,1,33,40,1,3,18,19,5,1,16,1,3,12,3,16,1,3,12,3,16,1,3,18,20,1,39,1,3,12,3,16,1,1,22,1,3,4,3,18,19,5,1,16,1,3,18,19,5,1,33,40,1,4,17,45,39,39,1,3,12,17,45,39,1,1,22,1,3,18,19,5,1,16,1,3,18,21,5,1,1,40,1,3,3,18,21,5,1,16,1,3,18,20,1,1,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>3,2,0,0,2,1,0,3,0,5,2,0,2,0,5,0,40,7,3,0,3,0,7,0,8,3,0,0,0,9,3,1,1,0,10,3,0,2,10,45,12,2,1,1,0,13,17,0,20,1,0,0,2,1,0,20,0,22,1,0,2,0,22,0,71,24,3,0,0,78,77,26,1,1,0,0,78,27,29,0,33,0,0,6,0,33,0,34,0,0,4,0,34,34,110,35,1,0,0,5,0,35,0,36,1,0,6,36,37,87,39,0,0</bsch:cmdOperand>
+			<bsch:constant>SВопрос</bsch:constant>
+			<bsch:constant>SОтвет</bsch:constant>
+			<bsch:constant>SЗаписать</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SСледующий</bsch:constant>
+			<bsch:constant>SПолучитьОбъект</bsch:constant>
+			<bsch:constant>SУдалить</bsch:constant>
+			<bsch:procedure name="ДобавитьОтвет" isExported="true" parametersCount="2" startAddr="0">
+				<bsch:variable name="Вопрос" isLocal="true" isParam="true"/>
+				<bsch:variable name="Ответ" isLocal="true" isParam="true"/>
+				<bsch:variable name="НайденныйВопрос" isLocal="true"/>
+				<bsch:variable name="НовыйЭлемент" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="НайтиПоРеквизиту" isFunction="true" isExternal="true" parametersCount="4" startAddr="0"/>
+			<bsch:procedure name="ПустаяСсылка" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+			<bsch:procedure name="СоздатьЭлемент" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+			<bsch:procedure name="ПолучитьОтвет" isFunction="true" isExported="true" parametersCount="1" startAddr="48">
+				<bsch:variable name="Вопрос" isLocal="true" isParam="true"/>
+				<bsch:variable name="НайденныйВопрос" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="Очистить" isExported="true" parametersCount="0" startAddr="80">
+				<bsch:variable name="Выборка" isLocal="true"/>
+				<bsch:variable name="Об1" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="Выбрать" isFunction="true" isExternal="true" parametersCount="4" startAddr="0"/>
+		</managerModule>
+		<objectModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</objectModule>
+		<foldersOnTop>true</foldersOnTop>
+		<inputByString>Description</inputByString>
+		<inputByString>Code</inputByString>
+		<attribute name="Вопрос" id="669329f8-d538-4579-b345-381e00f1f783">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>cfg:CatalogRef.ВопросыИОтветы</v8:Type>
+			</type>
+		</attribute>
+		<attribute name="Ответ" id="3b5350a0-ce94-45b3-ae67-b0bb61e1a92f">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответ</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</attribute>
+		<attribute name="Правильный" id="c9b2e007-e33a-4e1f-83e4-ccdfb7508459">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правильный</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:boolean</v8:Type>
+			</type>
+		</attribute>
+	</catalog>
 	<document name="РезультатТестирования" id="fa82e5dc-9d12-4f8a-9e3b-e8f60ef5d012">
 		<synonym>
 			<v8:item>
@@ -1869,6 +2242,110 @@
 			<mainFilter>true</mainFilter>
 		</dimension>
 	</informationRegister>
+	<enum name="РежимыОткрытияВопросов" id="9c270678-e239-4d0c-bf77-fd18989556aa">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Режимы открытия вопросов</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="EnumRef.РежимыОткрытияВопросов" category="Ref">
+			<xr:TypeId>2c775559-76cf-430a-a46e-f01dc58fe020</xr:TypeId>
+			<xr:ValueId>82fac722-77bd-40f2-8adc-90866d9fba6e</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumManager.РежимыОткрытияВопросов" category="Manager">
+			<xr:TypeId>ed735618-15b5-4315-80d7-6cf96a75c048</xr:TypeId>
+			<xr:ValueId>a176f75a-020c-4ff7-b212-1e53ec1cd42f</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumList.РежимыОткрытияВопросов" category="List">
+			<xr:TypeId>48e00404-d660-479d-9651-4bd7b91a96ed</xr:TypeId>
+			<xr:ValueId>2bb5fa23-e974-4b5c-92b7-c394e3c86f17</xr:ValueId>
+		</generatedType>
+		<managerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</managerModule>
+		<value name="ЗадатьВопрос" id="a9f278df-db91-40bf-9111-6355588166f6">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задать вопрос</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="ПоказатьОтвет" id="22e57a65-71df-4b85-9c52-938ef40aede2">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать ответ</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+	</enum>
+	<enum name="ДействиеВопроса" id="2806f8f4-f085-4e63-9151-d6142986e695">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Действие вопроса</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="EnumRef.ДействиеВопроса" category="Ref">
+			<xr:TypeId>347988d9-4f50-4df8-b8b8-2fae05cdab3c</xr:TypeId>
+			<xr:ValueId>09973a88-594a-4e22-b02d-50d7562cc48c</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumManager.ДействиеВопроса" category="Manager">
+			<xr:TypeId>b0add602-2b3a-43d1-9028-a9e9584c769f</xr:TypeId>
+			<xr:ValueId>09fd5ff2-4dfc-432b-9633-3f51fecc9387</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumList.ДействиеВопроса" category="List">
+			<xr:TypeId>254a02a4-0d1c-4dc7-b864-0d590e339186</xr:TypeId>
+			<xr:ValueId>bc79781e-196c-4714-a383-dbd082200e3f</xr:ValueId>
+		</generatedType>
+		<managerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</managerModule>
+		<value name="Следующий" id="16fdded8-58e9-4e60-8195-4372ddf9d21e">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="Предыдущий" id="966fad9e-68aa-4849-a73f-4148d776bc86">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="Ответить" id="8a26c69c-3b89-4427-a84f-4ee5b4356f3d">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответить</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="Завершить" id="aea12869-976d-43cd-9eb8-c254e04f3052">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="ВыбратьВОпрос" id="c5cca22d-7a64-4e88-89bc-4ad8c2a728fe">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать в опрос</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+	</enum>
 	<dataProcessor name="Тестирование" id="3c148a8e-8120-421f-8d92-c47467200ac2">
 		<synonym>
 			<v8:item>
@@ -2015,6 +2492,1365 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Форма моб</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="997">
+					<bsch:cmdOpCode>1,2,3,16,1,3,2,12,3,4,25,13,16,1,2,4,3,12,12,12,71,24,4,24,3,12,12,12,24,16,1,2,4,3,12,12,12,71,24,4,24,3,12,12,71,24,4,24,3,12,12,24,16,1,2,3,12,16,1,2,12,12,2,65,29,16,1,2,3,12,16,1,2,3,12,16,1,3,4,16,1,48,49,3,12,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,2,4,3,71,24,13,3,12,3,12,33,16,1,2,4,3,71,24,13,12,3,12,71,16,1,2,4,3,71,24,13,12,7,16,1,3,2,4,3,71,24,13,16,1,3,12,3,12,16,1,2,12,12,2,30,2,65,29,69,16,1,2,30,3,12,3,12,33,69,40,1,3,12,3,12,8,8,7,8,7,18,51,16,39,1,3,12,3,12,8,8,6,8,6,18,51,16,1,1,3,12,7,16,1,3,3,4,24,16,1,39,50,3,8,16,3,8,16,1,3,4,38,1,40,1,2,4,3,71,24,13,6,16,1,2,4,3,71,24,13,12,4,16,1,2,4,3,71,24,13,12,6,16,1,2,4,3,71,24,13,12,4,16,1,2,4,3,71,24,13,12,6,16,1,3,3,4,24,16,1,39,1,22,1,3,2,12,18,21,5,1,16,1,3,3,18,51,16,1,3,2,12,4,7,18,21,5,1,16,1,3,2,12,4,7,18,21,5,1,16,1,3,2,12,4,4,18,21,5,1,16,1,3,8,33,40,1,3,7,16,1,2,12,4,3,18,20,1,39,1,1,2,12,18,20,1,1,3,18,51,16,1,3,12,18,51,16,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,4,99,18,20,1,1,3,4,99,3,4,26,25,18,20,1,1,3,12,4,16,1,3,3,18,21,5,1,18,21,5,1,16,1,3,12,4,16,1,3,4,16,1,3,4,16,1,3,18,21,5,1,1,40,1,3,4,3,12,18,20,1,1,3,12,40,1,3,12,3,16,1,3,3,18,21,5,1,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,3,4,3,4,25,18,21,5,1,16,1,3,3,3,13,16,39,1,3,12,3,16,1,3,7,16,1,3,1,40,1,3,3,3,12,3,12,18,21,5,1,16,1,3,4,3,18,20,1,1,3,3,18,21,5,1,18,21,5,1,16,1,3,18,21,5,1,4,35,40,1,3,6,16,39,1,1,39,1,3,3,4,13,16,1,1,3,2,12,18,21,5,1,16,1,3,3,12,18,21,5,1,16,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,3,12,16,1,3,8,33,40,1,3,12,4,16,39,1,3,12,3,2,12,18,19,5,1,16,1,1,39,1,22,1,18,19,1,1,3,2,12,18,21,5,1,16,1,3,4,33,40,1,3,7,16,1,3,18,51,16,1,3,12,4,16,1,3,18,20,1,1,45,39,39,1,1,2,4,16,1,3,18,51,16,1,3,3,4,27,66,3,4,28,24,16,1,3,4,16,48,49,3,16,1,49,3,37,40,1,3,3,18,20,1,1,3,43,39,50,1,2,12,12,3,18,21,5,1,18,20,1,1,3,18,51,16,1,3,3,38,1,40,1,3,3,18,20,1,1,3,3,4,24,16,1,39,1,2,12,12,3,18,21,5,1,18,20,1,1,4,18,19,1,1,22,1,3,2,12,18,21,5,1,16,1,3,12,99,16,1,3,4,16,1,3,4,16,1,48,49,2,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,3,12,18,21,5,1,16,1,3,12,3,12,16,1,3,12,3,12,40,4,39,3,12,16,1,3,12,3,12,33,30,3,12,29,69,40,1,3,3,4,24,16,39,1,1,3,3,4,24,16,1,39,50,3,8,16,3,8,16,1,3,18,20,1,1,3,2,12,18,20,1,1,3,4,3,3,27,4,110,71,24,4,24,3,71,24,4,24,3,71,24,4,24,16,1,2,7,16,1,22,1,3,2,12,2,4,25,13,16,1,2,3,12,34,40,1,3,12,7,16,39,1,1,3,4,16,1,48,49,3,12,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,2,4,3,71,24,13,3,12,16,1,3,12,40,1,2,3,12,16,39,1,1,3,3,4,24,16,1,39,50,3,8,16,3,8,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>67,0,0,0,69,1,1,0,0,1,0,0,0,71,2,2,1,3,4,5,0,0,6,0,1,3,4,7,0,0,72,3,2,1,3,4,5,0,0,8,0,1,3,9,0,0,6,0,1,3,3,0,0,74,4,1,10,0,75,5,10,11,4,0,0,0,79,6,1,12,0,81,7,1,13,0,83,2,1,0,84,0,0,1,3,14,0,0,84,4,0,0,4,0,213,3,4,0,4,0,0,86,8,15,2,0,0,0,3,16,1,12,0,0,87,5,15,2,0,0,0,17,3,16,0,0,88,5,15,2,0,0,0,11,0,0,91,5,5,18,2,0,0,0,0,92,5,17,3,18,0,96,5,13,11,9,161,7,0,0,0,0,98,9,171,3,16,1,19,0,0,186,99,5,20,5,20,0,0,0,0,0,6,20,0,199,101,5,20,5,20,0,0,0,0,0,6,20,0,102,104,5,11,0,0,106,2,2,1,0,0,107,88,1,4,0,0,4,0,0,109,2,21,0,109,283,111,8,15,2,0,0,0,0,0,112,5,15,2,0,0,0,17,2,0,113,5,15,2,0,0,0,11,0,0,115,5,18,2,0,0,0,17,2,0,116,5,18,2,0,0,0,11,0,0,117,2,2,1,0,0,118,220,120,0,124,0,10,22,0,23,0,124,0,125,1,0,1,24,0,128,2,10,25,27,0,2,26,0,128,0,132,3,10,25,28,0,2,26,0,132,0,133,4,10,25,29,30,2,26,0,133,0,134,3,0,0,351,135,3,0,0,136,10,25,28,3,2,31,136,351,137,139,1,0,0,32,139,141,5,0,33,0,142,5,34,0,34,0,144,5,27,2,2,35,144,146,5,36,3,2,35,146,147,5,37,0,2,35,147,148,5,38,0,4,39,0,0,2,35,148,151,5,40,41,0,216,6,5,0,42,0,216,0,43,0,216,0,218,5,40,44,0,238,7,44,0,270,8,45,0,288,6,0,46,0,288,288,624,290,5,4,6,4,2,35,290,292,6,47,495,293,5,40,8,0,294,9,5,0,42,0,294,0,48,0,294,0,295,10,9,0,49,0,295,0,296,11,1,51,10,1,0,2,50,0,296,0,298,12,9,11,0,0,562,301,5,40,7,0,303,13,0,0,304,13,304,556,305,11,1,6,52,6,53,2,50,0,305,0,307,5,54,11,2,35,307,308,14,5,0,42,0,308,0,48,0,308,0,309,14,0,49,0,309,51,0,553,310,13,0,0,553,311,312,504,314,12,14,51,0,0,315,317,15,1,0,0,55,0,317,0,320,16,12,56,0,57,0,320,0,322,15,3,12,58,0,323,15,19,12,19,0,324,15,13,12,13,0,325,16,0,0,610,326,15,10,2,0,621,328,15,10,16,8,59,2,2,0,328,0,329,330,431,332,0,337,0,1,337,339,2,1,0,0,49,0,339,0,340,2,51,0,667,341,0,0,0,343,3,0,60,0,344,3,40,61,0,345,3,0,62,345,347,0,766,667,348,350,0,1,0,353,4,0,63,0,355,5,2,64,0,0,2,64,0,0,0,357,6,1,0,0,0,5,0,357,0,6,0,711,358,4,6,1,55,358,359,6,0,696,1,361,5,65,66,4,0,68,0,361,1,67,361,363,4,0,63,0,365,6,2,0,365,749,366,4,6,1,55,366,367,6,6,1,0,0,368,729,370,5,69,66,4,0,68,0,370,1,67,370,372,1,1,0,372,373,0,378,1,11,70,0,71,0,378,0,380,1,72,0,0,382,2,51,0,383,3,51,0,385,0,0,1,0,0,0,385,5,0,0,5,0,864,4,5,0,5,0,0,386,6,1,14,0,55,0,386,0,387,6,3,4,3,0,388,6,16,4,73,833,51,835,4,12,0,390,4,12,4,19,0,847,4,73,0,0,855,391,3,3,1,0,0,855,392,394,2,2,1,0,0,395,797,1,5,0,0,5,0,0,397,1,0,74,397,398,1,12,75,1,74,398,413,0,76,3,2,0,77,0,0,0,78,0,3,0,0,79,0,2,0,0,80,0,0,415,9,0,0,417,0,506,0,1,0,0,1,0,0,0,508,6,0,19,0,933,509,0,73,0,0,933,510,512,1,1,0,514,0,0,0,3,14,0,0,514,3,0,0,3,0,988,2,3,0,3,0,0,516,8,15,1,0,0,0,2,81,0,518,2,81,979,519,6,2,16,0,979,520,522,1,1,1,0,0,523,946,1,3,0,0,3,0,0,524,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SТаблицаВопросов</bsch:constant>
+					<bsch:constant>N1</bsch:constant>
+					<bsch:constant>S</bsch:constant>
+					<bsch:constant>SВопрос</bsch:constant>
+					<bsch:constant>SВладелец</bsch:constant>
+					<bsch:constant>SНомерРаздела</bsch:constant>
+					<bsch:constant>S. </bsch:constant>
+					<bsch:constant>SНаименование</bsch:constant>
+					<bsch:constant>S.</bsch:constant>
+					<bsch:constant>SНомерВопроса</bsch:constant>
+					<bsch:constant>SКартинка</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>SТекущийОтвет</bsch:constant>
+					<bsch:constant>SКомментарий</bsch:constant>
+					<bsch:constant>SОтветы</bsch:constant>
+					<bsch:constant>SФлажок</bsch:constant>
+					<bsch:constant>SНомерОтвета</bsch:constant>
+					<bsch:constant>SЗаголовок</bsch:constant>
+					<bsch:constant>SОтвет</bsch:constant>
+					<bsch:constant>SПравильныйОтвет</bsch:constant>
+					<bsch:constant>SШрифт</bsch:constant>
+					<bsch:constant>N10</bsch:constant>
+					<bsch:constant>SУникальностьГенератораСлучайныхЧисел</bsch:constant>
+					<bsch:constant>SПолучитьНовоеЧисло</bsch:constant>
+					<bsch:constant>SГенераторСлучайныхЧисел</bsch:constant>
+					<bsch:constant>SХранилищеНастроек</bsch:constant>
+					<bsch:constant>SПолучитьНастройку</bsch:constant>
+					<bsch:constant>SНеПодбиратьУдаленные</bsch:constant>
+					<bsch:constant>SАнализироватьРезультатыПриПодбореВопросов</bsch:constant>
+					<bsch:constant>SПериодАнализаРезультатовПриПодбореВопросов</bsch:constant>
+					<bsch:constant>N20</bsch:constant>
+					<bsch:constant>SЗаписатьНастройку</bsch:constant>
+					<bsch:constant>SОчистить</bsch:constant>
+					<bsch:constant>SЗапрос</bsch:constant>
+					<bsch:constant>SМенеджерВременныхТаблиц</bsch:constant>
+					<bsch:constant>SУстановитьПараметр</bsch:constant>
+					<bsch:constant>SАнализироватьРезультаты</bsch:constant>
+					<bsch:constant>SТекущийМоментВремени</bsch:constant>
+					<bsch:constant>SМоментВремени</bsch:constant>
+					<bsch:constant>N60</bsch:constant>
+					<bsch:constant>SТекст</bsch:constant>
+					<bsch:constant>SВЫБРАТЬ
+	РезультатыТестированияСрезПоследних.Вопрос.Владелец КАК Раздел,
+	РезультатыТестированияСрезПоследних.Вопрос КАК Ссылка,
+	РезультатыТестированияСрезПоследних.Вопрос.НомерВопроса КАК НомерВопроса,
+	ЕСТЬNULL(РезультатыТестированияСрезПоследнихТекущий.Правильный, РезультатыТестированияСрезПоследних.Правильный) КАК Правильный
+ПОМЕСТИТЬ ВтПредыдущийРезультат
+ИЗ
+	РегистрСведений.РезультатыТестирования.СрезПоследних(
+			&amp;МоментВремени,
+			&amp;АнализироватьРезультаты
+				И ВЫБОР
+					КОГДА &amp;НеПодбиратьУдаленные
+						ТОГДА НЕ Вопрос.ПометкаУдаления
+								И НЕ Вопрос.Владелец.ПометкаУдаления
+					ИНАЧЕ ИСТИНА
+				КОНЕЦ) КАК РезультатыТестированияСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РезультатыТестирования.СрезПоследних(
+				&amp;ТекущийМоментВремени,
+				&amp;АнализироватьРезультаты
+					И ВЫБОР
+						КОГДА &amp;НеПодбиратьУдаленные
+							ТОГДА НЕ Вопрос.ПометкаУдаления
+									И НЕ Вопрос.Владелец.ПометкаУдаления
+						ИНАЧЕ ИСТИНА
+					КОНЕЦ) КАК РезультатыТестированияСрезПоследнихТекущий
+		ПО РезультатыТестированияСрезПоследних.Вопрос = РезультатыТестированияСрезПоследнихТекущий.Вопрос
+			И (РезультатыТестированияСрезПоследних.Правильный = 0)
+ГДЕ
+	ЕСТЬNULL(РезультатыТестированияСрезПоследнихТекущий.Правильный, РезультатыТестированияСрезПоследних.Правильный) = 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВопросыИОтветы.Владелец,
+	ВопросыИОтветы.Владелец.НомерРаздела КАК НомерРаздела,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ВопросыИОтветы.Ссылка) КАК КоличествоВопросов,
+	МИНИМУМ(ВопросыИОтветы.НомерВопроса) КАК МинВопрос,
+	МАКСИМУМ(ВопросыИОтветы.НомерВопроса) КАК МаксВопрос,
+	ЕСТЬNULL(ПредыдущийРезультат.КоличествоВопросов, 0) &gt; 0 КАК ЕстьПредыдущие
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВтПредыдущийРезультат.Раздел КАК Раздел,
+			КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ВтПредыдущийРезультат.Ссылка) КАК КоличествоВопросов
+		ИЗ
+			ВтПредыдущийРезультат КАК ВтПредыдущийРезультат
+		
+		СГРУППИРОВАТЬ ПО
+			ВтПредыдущийРезультат.Раздел) КАК ПредыдущийРезультат
+		ПО (ПредыдущийРезультат.Раздел = ВопросыИОтветы.Владелец)
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;НеПодбиратьУдаленные
+				ТОГДА НЕ ВопросыИОтветы.ПометкаУдаления
+						И НЕ ВопросыИОтветы.Владелец.ПометкаУдаления
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+СГРУППИРОВАТЬ ПО
+	ВопросыИОтветы.Владелец,
+	ВопросыИОтветы.Владелец.НомерРаздела,
+	ЕСТЬNULL(ПредыдущийРезультат.КоличествоВопросов, 0) &gt; 0
+
+УПОРЯДОЧИТЬ ПО
+	НомерРаздела</bsch:constant>
+					<bsch:constant>SВыполнить</bsch:constant>
+					<bsch:constant>SВыбрать</bsch:constant>
+					<bsch:constant>SВЫБРАТЬ ПЕРВЫЕ 1
+	ВопросыИОтветы.Ссылка,
+	ВопросыИОтветы.ХранилищеКартинки,
+	ВопросыИОтветыОтветы.НомерОтвета КАК ПравильныйОтвет,
+	ВопросыИОтветы.Комментарий
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВопросыИОтветы.Ответы КАК ВопросыИОтветыОтветы
+		ПО (ВопросыИОтветыОтветы.Ссылка = ВопросыИОтветы.Ссылка)
+			И (ВопросыИОтветыОтветы.ЭтоПравильный)
+ГДЕ
+	ВопросыИОтветы.Владелец = &amp;Владелец
+	И ВопросыИОтветы.НомерВопроса = &amp;СлучайныйНомер
+	И ВЫБОР
+			КОГДА &amp;НеПодбиратьУдаленные
+				ТОГДА НЕ ВопросыИОтветы.ПометкаУдаления
+						И НЕ ВопросыИОтветы.Владелец.ПометкаУдаления
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ</bsch:constant>
+					<bsch:constant>SВЫБРАТЬ
+	ВтПредыдущийРезультат.Ссылка,
+	ВтПредыдущийРезультат.Ссылка.ХранилищеКартинки КАК ХранилищеКартинки,
+	ВопросыИОтветыОтветы.НомерОтвета КАК ПравильныйОтвет,
+	ВопросыИОтветы.Комментарий
+ИЗ
+	ВтПредыдущийРезультат КАК ВтПредыдущийРезультат
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВопросыИОтветы.Ответы КАК ВопросыИОтветыОтветы
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+			ПО ВопросыИОтветыОтветы.Ссылка = ВопросыИОтветы.Ссылка
+		ПО (ВопросыИОтветыОтветы.Ссылка = ВтПредыдущийРезультат.Ссылка)
+			И (ВопросыИОтветыОтветы.ЭтоПравильный)
+ГДЕ
+	ВтПредыдущийРезультат.Раздел = &amp;Владелец</bsch:constant>
+					<bsch:constant>SСледующий</bsch:constant>
+					<bsch:constant>SЕстьПредыдущие</bsch:constant>
+					<bsch:constant>SВыгрузить</bsch:constant>
+					<bsch:constant>SКоличество</bsch:constant>
+					<bsch:constant>SСлучайноеЧисло</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SМинВопрос</bsch:constant>
+					<bsch:constant>SМаксВопрос</bsch:constant>
+					<bsch:constant>SСлучайныйНомер</bsch:constant>
+					<bsch:constant>SДобавить</bsch:constant>
+					<bsch:constant>SХранилищеКартинки</bsch:constant>
+					<bsch:constant>SПолучить</bsch:constant>
+					<bsch:constant>SСсылка</bsch:constant>
+					<bsch:constant>SУникальныйИдентификатор</bsch:constant>
+					<bsch:constant>SСообщениеПользователю</bsch:constant>
+					<bsch:constant>SНе заполнена ТЗ вопросов!</bsch:constant>
+					<bsch:constant>SСообщить</bsch:constant>
+					<bsch:constant>SСписокЗначений</bsch:constant>
+					<bsch:constant>N2</bsch:constant>
+					<bsch:constant>SНомераВопросов1</bsch:constant>
+					<bsch:constant>SСписокВыбора</bsch:constant>
+					<bsch:constant>SЗагрузитьЗначения</bsch:constant>
+					<bsch:constant>SВыгрузитьЗначения</bsch:constant>
+					<bsch:constant>SНомераВопросов2</bsch:constant>
+					<bsch:constant>SРезультатТестирования</bsch:constant>
+					<bsch:constant>SСоздатьДокумент</bsch:constant>
+					<bsch:constant>SДата</bsch:constant>
+					<bsch:constant>SБылаИспользованаПодсказка</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SПроведение</bsch:constant>
+					<bsch:constant>SВаш результат: </bsch:constant>
+					<bsch:constant>SЧДЦ=; ЧС=-2</bsch:constant>
+					<bsch:constant>S% (</bsch:constant>
+					<bsch:constant>S из </bsch:constant>
+					<bsch:constant>S)</bsch:constant>
+					<bsch:constant>SЭтоПравильный</bsch:constant>
+					<bsch:variable name="НомерВопроса" isExternal="true"/>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:variable name="Раздел" isExternal="true"/>
+					<bsch:variable name="Вопрос" isExternal="true"/>
+					<bsch:variable name="АдресКартинки" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="Ответ" isExternal="true"/>
+					<bsch:variable name="Комментарий" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:variable name="ПоказыватьПравильныеОтветы" isExternal="true"/>
+					<bsch:variable name="РегистрыСведений" isExternal="true"/>
+					<bsch:variable name="Документы" isExternal="true"/>
+					<bsch:variable name="РежимЗаписиДокумента" isExternal="true"/>
+					<bsch:procedure name="ПоказатьВопросНомер" parametersCount="1" startAddr="0">
+						<bsch:variable name="Ном" isLocal="true" isParam="true"/>
+						<bsch:variable name="ТекСтрока" isLocal="true"/>
+						<bsch:variable name="н" isLocal="true"/>
+						<bsch:variable name="ТекОтвет" isLocal="true"/>
+						<bsch:variable name="0ТекОтвет" isLocal="true"/>
+						<bsch:variable name="ЭлОтвет" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="НачатьТестирование" parametersCount="0" startAddr="285">
+						<bsch:variable name="УникЧисло" isLocal="true"/>
+						<bsch:variable name="Ген" isLocal="true"/>
+						<bsch:variable name="НеПодбиратьУдаленные" isLocal="true"/>
+						<bsch:variable name="АнализироватьРезультаты" isLocal="true"/>
+						<bsch:variable name="ПериодАнализаРезультатов" isLocal="true"/>
+						<bsch:variable name="Запрос" isLocal="true"/>
+						<bsch:variable name="ВыборкаВопросы" isLocal="true"/>
+						<bsch:variable name="ТекстЗапросаСлучайныйВопрос" isLocal="true"/>
+						<bsch:variable name="ТекстЗапросаАнализВопросов" isLocal="true"/>
+						<bsch:variable name="ТЗПредыдущиеВопросы" isLocal="true"/>
+						<bsch:variable name="КолПредыдуших" isLocal="true"/>
+						<bsch:variable name="СлучайныйНомер" isLocal="true"/>
+						<bsch:variable name="ТекСтрокаЗапроса" isLocal="true"/>
+						<bsch:variable name="Флаг" isLocal="true"/>
+						<bsch:variable name="ТЗСлучайныйВопрос" isLocal="true"/>
+						<bsch:variable name="НовСтр" isLocal="true"/>
+						<bsch:variable name="ДвоичныеДанные" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоместитьВоВременноеХранилище" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="626">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:variable name="КоличествоВопросов" isLocal="true"/>
+						<bsch:variable name="Сообщение" isLocal="true"/>
+						<bsch:variable name="НовСписокВыбора" isLocal="true"/>
+						<bsch:variable name="КолВопросов1" isLocal="true"/>
+						<bsch:variable name="н" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗавершитьТестирование" parametersCount="1" startAddr="768">
+						<bsch:variable name="Сообщение" isLocal="true" isParam="true"/>
+						<bsch:variable name="НовыйДок" isLocal="true"/>
+						<bsch:variable name="КолВопросов" isLocal="true"/>
+						<bsch:variable name="КолПравильных" isLocal="true"/>
+						<bsch:variable name="ТекВопрос" isLocal="true"/>
+						<bsch:variable name="0ТекВопрос" isLocal="true"/>
+						<bsch:variable name="НовСтр" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КомандаПоказатьПравильныйНаСервере" parametersCount="0" startAddr="912">
+						<bsch:variable name="ТекСтрока" isLocal="true"/>
+						<bsch:variable name="н" isLocal="true"/>
+						<bsch:variable name="ТекОтвет" isLocal="true"/>
+						<bsch:variable name="0ТекОтвет" isLocal="true"/>
+					</bsch:procedure>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="630">
+					<bsch:cmdOpCode>1,2,12,2,4,25,13,12,2,16,1,48,49,2,12,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,2,12,3,12,4,25,13,12,4,34,40,1,3,12,3,12,71,4,24,16,39,1,3,12,3,12,71,16,1,1,39,50,3,8,16,3,8,16,1,48,49,2,12,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,2,12,3,12,4,25,13,12,4,34,40,1,3,12,3,12,71,4,24,16,39,1,3,12,3,12,71,16,1,1,39,50,3,8,16,3,8,16,1,3,6,16,1,3,2,16,1,3,4,16,1,3,2,12,18,21,5,1,4,24,16,1,3,29,30,3,3,36,69,1,40,1,3,3,4,24,16,1,3,2,12,18,21,5,1,35,40,1,3,4,16,39,1,1,2,12,3,4,25,13,12,4,33,40,1,3,7,16,39,1,1,3,3,4,24,16,1,39,1,3,40,1,2,3,16,1,2,18,19,1,39,1,2,12,12,7,16,1,4,2,12,18,19,5,1,2,12,33,40,1,3,18,19,1,1,45,39,39,1,1,1,2,12,7,16,1,22,1,2,18,19,1,1,22,1,3,4,16,1,3,18,19,1,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,7,16,1,48,49,2,12,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,2,12,3,12,4,25,13,12,2,12,3,12,4,25,13,12,34,40,1,3,12,3,12,71,4,24,16,39,1,2,12,3,12,4,25,13,12,40,1,3,12,3,12,71,4,24,16,39,1,3,12,3,12,71,16,1,1,39,50,3,8,16,3,8,16,1,48,49,2,12,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,2,12,3,12,4,25,13,12,2,12,3,12,4,25,13,12,34,40,1,3,12,3,12,71,4,24,16,39,1,2,12,3,12,4,25,13,12,40,1,3,12,3,12,71,4,24,16,39,1,3,12,3,12,71,16,1,1,39,50,3,8,16,3,8,16,1,2,12,6,16,1,4,18,19,1,1,3,18,19,1,1,22,1,2,12,40,1,4,2,12,18,19,5,1,2,12,33,40,1,3,7,16,39,1,39,1,1,22,1,3,3,12,4,4,100,70,16,1,2,3,12,70,16,1,3,4,16,48,49,4,16,1,49,3,37,40,1,2,4,3,71,24,13,3,3,33,16,1,3,43,39,50,1,22,1,3,6,16,1,3,4,18,19,5,1,16,1,2,18,19,5,1,3,18,20,1,1,3,10,7,18,19,1,1,3,18,19,1,1,22,1,4,2,12,18,19,5,1,2,12,33,40,1,18,19,1,1,2,12,12,7,16,39,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>3,0,0,1,1,0,0,2,2,0,5,0,0,3,3,4,0,0,5,2,0,0,2,0,63,1,2,0,2,0,0,6,0,0,1,5,1,0,0,2,6,0,53,7,1,7,1,5,0,8,0,0,60,9,1,7,1,5,0,0,10,11,18,1,2,0,0,2,0,0,13,0,0,3,9,4,0,0,13,2,0,0,2,0,123,1,2,0,2,0,0,14,0,0,1,5,1,0,0,2,6,0,113,15,1,7,1,5,0,8,0,0,120,17,1,7,1,5,0,0,18,19,78,1,2,0,0,2,0,0,22,3,0,0,23,4,1,0,25,5,1,0,27,6,0,0,0,10,0,27,1,0,0,29,3,0,161,5,6,0,0,29,210,31,4,4,1,0,0,33,4,0,0,0,10,0,33,0,184,34,4,1,0,184,35,37,0,0,4,1,0,0,2,6,0,201,38,3,0,0,201,39,41,5,5,1,0,0,42,153,44,3,223,45,1,4,0,46,1,1,1,46,251,48,3,11,12,0,0,55,13,4,14,2,2,0,55,5,15,0,250,56,0,1,3,56,57,0,257,250,58,59,61,6,16,0,0,63,0,421,1,1,1,421,422,0,427,1,17,0,428,1,1,5,428,430,3,18,12,0,0,431,3,19,12,0,0,432,3,11,12,0,0,434,3,20,12,0,0,439,0,0,3,3,4,0,0,439,3,0,0,3,0,379,2,3,0,3,0,0,440,0,0,2,5,1,0,0,2,0,0,2,5,1,0,0,21,0,349,441,2,7,2,5,0,22,0,0,376,442,0,0,2,5,1,0,0,23,369,443,2,7,2,5,0,24,0,0,376,445,2,7,2,5,0,0,446,447,307,1,3,0,0,3,0,0,449,0,0,3,9,4,0,0,449,3,0,0,3,0,466,2,3,0,3,0,0,450,0,0,2,5,1,0,0,2,0,0,2,5,1,0,0,21,0,436,451,2,7,2,5,0,22,0,0,463,452,0,0,2,5,1,0,0,23,456,453,2,7,2,5,0,24,0,0,463,455,2,7,2,5,0,0,456,457,394,1,3,0,0,3,0,0,459,6,16,0,0,460,1,1,1,460,462,1,1,6,462,465,0,469,6,16,513,470,25,4,14,2,2,0,470,5,26,0,511,472,0,0,0,511,474,513,475,476,0,481,1,0,27,28,17,0,0,0,483,2,0,29,0,0,485,2,1,0,0,0,30,0,485,0,2,0,559,486,6,28,2,0,0,0,2,1,0,0,487,2,0,539,1,489,0,493,1,0,0,494,2,31,1,10,0,494,0,495,7,1,11,0,495,2,1,32,495,496,2,0,0,3,12,496,498,2,1,13,498,500,0,528,33,4,14,2,2,0,528,5,15,0,621,529,0,15,529,530,3,34,12,0,0,621,531,533,0,537,0,17,537,538,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SТаблицаВопросов</bsch:constant>
+					<bsch:constant>N1</bsch:constant>
+					<bsch:constant>SТекущийОтвет</bsch:constant>
+					<bsch:constant>SНомераВопросов1</bsch:constant>
+					<bsch:constant>SСписокВыбора</bsch:constant>
+					<bsch:constant>SЗначение</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SПредставление</bsch:constant>
+					<bsch:constant>S*</bsch:constant>
+					<bsch:constant>SНомераВопросов2</bsch:constant>
+					<bsch:constant>SКоличество</bsch:constant>
+					<bsch:constant>SКомандаЗавершить</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>SЗавершить тестирование?</bsch:constant>
+					<bsch:constant>SДаНет</bsch:constant>
+					<bsch:constant>SДа</bsch:constant>
+					<bsch:constant>SМодифицированность</bsch:constant>
+					<bsch:constant>S</bsch:constant>
+					<bsch:constant>SКомандаОтветить</bsch:constant>
+					<bsch:constant>SКомандаПоказатьПравильный</bsch:constant>
+					<bsch:constant>SКомандаЗакрыть</bsch:constant>
+					<bsch:constant>SПравильныйОтвет</bsch:constant>
+					<bsch:constant>S#</bsch:constant>
+					<bsch:constant>SБылаИспользованаПодсказка</bsch:constant>
+					<bsch:constant>S?</bsch:constant>
+					<bsch:constant>SТест не завершен. Данные не будут сохранены. Закрыть?</bsch:constant>
+					<bsch:constant>SНет</bsch:constant>
+					<bsch:constant>SИмя</bsch:constant>
+					<bsch:constant>SФлажок</bsch:constant>
+					<bsch:constant>SЗаголовок</bsch:constant>
+					<bsch:constant>N10</bsch:constant>
+					<bsch:constant>S.jpg</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SПоказать подсказку?</bsch:constant>
+					<bsch:constant>SКомментарий</bsch:constant>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:variable name="НомерВопроса" isExternal="true"/>
+					<bsch:variable name="Ответ" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="РежимДиалогаВопрос" isExternal="true"/>
+					<bsch:variable name="КодВозвратаДиалога" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:variable name="АдресКартинки" isExternal="true"/>
+					<bsch:procedure name="КомандаОтветить" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="ТекЭл" isLocal="true"/>
+						<bsch:variable name="0ТекЭл" isLocal="true"/>
+						<bsch:variable name="ЕстьНеОтвеченный" isLocal="true"/>
+						<bsch:variable name="НовыйНомерВопроса" isLocal="true"/>
+						<bsch:variable name="КолЦиклов" isLocal="true"/>
+						<bsch:variable name="КоличествоДляПроверки" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоказатьВопросНомер" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Вопрос" isFunction="true" isExternal="true" parametersCount="6" startAddr="0"/>
+					<bsch:procedure name="КомандаЗавершить" parametersCount="1" startAddr="266">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="Сообщение" isLocal="true"/>
+						<bsch:variable name="ТекЭл" isLocal="true"/>
+						<bsch:variable name="0ТекЭл" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="НомераВопросовПриИзменении" parametersCount="1" startAddr="259">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗавершитьТестирование" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ПередЗакрытием" parametersCount="2" startAddr="490">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Флажок1ПриИзменении" parametersCount="1" startAddr="516">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ТекНомерЭлемента" isLocal="true"/>
+						<bsch:variable name="н" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КартинкаНажатие" parametersCount="2" startAddr="562">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:variable name="Файл" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПолучитьИмяВременногоФайла" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="ПолучитьИзВременногоХранилища" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="ЗапуститьПриложение" isExternal="true" parametersCount="4" startAddr="0"/>
+					<bsch:procedure name="УдалитьФайлы" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="КомандаПоказатьПравильный" parametersCount="1" startAddr="598">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КомандаПоказатьПравильныйНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="КомандаЗакрыть" parametersCount="1" startAddr="624">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:TypeId>1b6ef4f1-71e8-4c7f-ae57-9b99e1aebb59</v8:TypeId>
+						</mf:type>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="Вопрос">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вопрос</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Раздел">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Раздел</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Ответ">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ответ</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="НомерВопроса">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номер вопроса</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="АдресКартинки">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адрес картинки</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ВремяНачала">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Время начала</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>DateTime</v8:DateFractions>
+							</v8:DateQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок1">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок2">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок3">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок4">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок5">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок6">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок7">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок8">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок9">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок10">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ПоказыватьПравильныеОтветы">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Показывать правильные ответы</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Комментарий">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комментарий</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="КомандаОтветить">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда ответить</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаОтветить</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда ответить</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаЗавершить">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда завершить</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаЗавершить</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда завершить</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаПоказатьПравильный">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда показать правильный</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаПоказатьПравильный</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда показать правильный</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаЗакрыть">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда закрыть</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаЗакрыть</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда закрыть</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+						<mf:autoMenuData>
+							<mf:autofill>false</mf:autofill>
+						</mf:autoMenuData>
+					</mf:autoCommandBar>
+					<mf:event handler="ПриОткрытии" name="OnOpen"/>
+					<mf:event handler="ПередЗакрытием" name="BeforeClose"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:event handler="ПриЗакрытии" name="OnClose"/>
+					<mf:field name="НомераВопросов1" kind="RadioButtonField" dataPath="НомерВопроса">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вопросы</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="НомераВопросов1КонтекстноеМеню" type="ContextMenu"/>
+						<mf:event handler="НомераВопросовПриИзменении" name="OnChange"/>
+						<mf:radioData>
+							<mf:choiceList>
+								<v8:valueType/>
+								<v8:lastId xsi:type="xs:decimal">6</v8:lastId>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">0</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">1</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>3</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">2</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>4</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">3</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>5</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">4</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>6</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">5</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>7</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">6</v8:id>
+								</v8:item>
+							</mf:choiceList>
+							<mf:radioButtonType>Tumbler</mf:radioButtonType>
+						</mf:radioData>
+					</mf:field>
+					<mf:field name="НомераВопросов2" kind="RadioButtonField" dataPath="НомерВопроса">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вопросы</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="НомераВопросов2КонтекстноеМеню" type="ContextMenu"/>
+						<mf:event handler="НомераВопросовПриИзменении" name="OnChange"/>
+						<mf:radioData>
+							<mf:choiceList>
+								<v8:valueType/>
+								<v8:lastId xsi:type="xs:decimal">6</v8:lastId>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>8</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">0</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>9</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">1</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>10</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">2</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>11</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">3</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>12</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">4</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>13</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">5</v8:id>
+								</v8:item>
+								<v8:item>
+									<v8:value xsi:type="LogFormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>14</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</v8:value>
+									<v8:id xsi:type="xs:decimal">6</v8:id>
+								</v8:item>
+							</mf:choiceList>
+							<mf:radioButtonType>Tumbler</mf:radioButtonType>
+						</mf:radioData>
+					</mf:field>
+					<mf:field name="Раздел" kind="InputField" dataPath="Раздел">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:readOnly>true</mf:readOnly>
+						<mf:contextMenu name="РазделКонтекстноеМеню" type="ContextMenu"/>
+						<mf:titleFont ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
+					</mf:field>
+					<mf:field name="Вопрос" kind="InputField" dataPath="Вопрос">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>бдлжлдж.б ю.бю</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:readOnly>true</mf:readOnly>
+						<mf:contextMenu name="ВопросКонтекстноеМеню" type="ContextMenu"/>
+						<mf:titleFont ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
+					</mf:field>
+					<mf:field name="Картинка" kind="PictureField" dataPath="АдресКартинки">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="КартинкаКонтекстноеМеню" type="ContextMenu"/>
+						<mf:imageData hyperlink="true">
+							<mf:pictureSize>Proportionally</mf:pictureSize>
+							<mf:zoomable>true</mf:zoomable>
+							<mf:border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</mf:border>
+							<mf:height>15</mf:height>
+							<mf:verticalStretch>false</mf:verticalStretch>
+							<mf:event handler="КартинкаНажатие" name="Click"/>
+						</mf:imageData>
+					</mf:field>
+					<mf:group name="ГруппаОтветы" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа ответы</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа ответы</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:group name="ГруппаОтвет1" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок1" kind="CheckBoxField" dataPath="Флажок1">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок1КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ1" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+								<mf:contextMenu name="Ответ1КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет2" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок2" kind="CheckBoxField" dataPath="Флажок2">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок2КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ2" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ2КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет3" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок3" kind="CheckBoxField" dataPath="Флажок3">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок3КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ3" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ3КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет4" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок4" kind="CheckBoxField" dataPath="Флажок4">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок4КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ4" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ4КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет5" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок5" kind="CheckBoxField" dataPath="Флажок5">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок5КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ5" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ5КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет6" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок6" kind="CheckBoxField" dataPath="Флажок6">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок6КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ6" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ6КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет7" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок7" kind="CheckBoxField" dataPath="Флажок7">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок7КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ7" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ7КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет8" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок8" kind="CheckBoxField" dataPath="Флажок8">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок8КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ8" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ8КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет9" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок9" kind="CheckBoxField" dataPath="Флажок9">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок9КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ9" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ9КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет10" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок10" kind="CheckBoxField" dataPath="Флажок10">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок10КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ10" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ10КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+					</mf:group>
+					<mf:field name="Комментарий" kind="InputField" dataPath="Комментарий">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="КомментарийКонтекстноеМеню" type="ContextMenu"/>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
+					</mf:field>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:usualData group="Horizontal">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:button name="КомандаОтветить" type="UsualButton" commandName="Form.Command.КомандаОтветить">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ответить</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:height>2</mf:height>
+						</mf:button>
+						<mf:button name="КомандаЗавершить" type="UsualButton" commandName="Form.Command.КомандаЗавершить">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Завершить</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:visible>false</mf:visible>
+							<mf:height>2</mf:height>
+						</mf:button>
+						<mf:button name="КомандаПоказатьПравильный" type="UsualButton" commandName="Form.Command.КомандаПоказатьПравильный">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подсказка</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:height>2</mf:height>
+						</mf:button>
+						<mf:button name="КомандаЗакрыть" type="UsualButton" commandName="Form.Command.КомандаЗакрыть">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закрыть</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:visible>false</mf:visible>
+							<mf:height>2</mf:height>
+						</mf:button>
+					</mf:group>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаМоб1" id="f0bdd727-34ad-4cd2-85ea-68971e52635b">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма моб1</v8:content>
 				</v8:item>
 			</synonym>
 			<form>
@@ -7784,6 +9620,1500 @@
 						</mf:inputData>
 					</mf:field>
 					<mf:button name="КомандаВыгрузить" type="UsualButton" commandName="Form.Command.КомандаВыгрузить"/>
+				</mf:mainElement>
+			</form>
+		</form>
+	</dataProcessor>
+	<dataProcessor name="ТестированиеСлучайное" id="18f91717-0dc4-46b0-9ee4-6971de8610ad">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тестирование случайное</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="DataProcessorObject.ТестированиеСлучайное" category="Object">
+			<xr:TypeId>c4a8aba6-5f49-46d4-8942-86473d139e1e</xr:TypeId>
+			<xr:ValueId>a5712391-6fda-4c8e-b137-67b611fc89d7</xr:ValueId>
+		</generatedType>
+		<generatedType name="DataProcessorManager.ТестированиеСлучайное" category="Manager">
+			<xr:TypeId>9695ad79-ec0e-4e07-aa7f-5ecf7bd3aa83</xr:TypeId>
+			<xr:ValueId>e777e27c-4138-4251-b036-4c6885e419e9</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</objectModule>
+		<defaultForm>DataProcessor.ТестированиеСлучайное.Form.Форма</defaultForm>
+		<form name="Форма" id="a49e6ffd-cd97-4bde-81a9-3ec4a5cb789e">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="24">
+					<bsch:cmdOpCode>1,3,2,12,4,4,18,21,5,1,16,1,2,2,12,4,3,18,21,5,1,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>86,2,0,0,2,3,2,1,0,86,0,87,1,2,4,6,2,2,5,0,87,0,89,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SХранилищеНастроек</bsch:constant>
+					<bsch:constant>SПолучитьНастройку</bsch:constant>
+					<bsch:constant>SТекущийРаздел</bsch:constant>
+					<bsch:constant>N1</bsch:constant>
+					<bsch:constant>SРазделы</bsch:constant>
+					<bsch:constant>SНайтиПоРеквизиту</bsch:constant>
+					<bsch:constant>SНомерРаздела</bsch:constant>
+					<bsch:variable name="РегистрыСведений" isExternal="true"/>
+					<bsch:variable name="ТекущийРаздел" isExternal="true"/>
+					<bsch:variable name="Справочники" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:variable name="НомерРаздела" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="269">
+					<bsch:cmdOpCode>1,4,18,19,1,1,22,1,3,4,3,3,3,18,51,16,1,3,4,2,18,51,16,1,4,3,2,10,10,10,3,18,19,1,1,22,1,3,18,51,16,1,3,12,2,18,21,5,1,16,1,3,18,20,1,1,2,18,20,1,1,22,1,3,6,16,1,3,8,33,40,1,45,39,39,1,3,12,4,33,40,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,39,1,3,12,4,33,40,1,3,7,16,39,1,3,12,4,33,40,1,18,19,1,1,45,39,39,1,3,18,51,16,1,3,12,4,3,12,24,16,1,3,18,20,1,1,45,39,1,1,3,2,2,18,21,5,1,16,1,2,3,3,18,19,1,1,22,1,2,18,21,5,1,4,33,40,1,2,2,18,20,1,1,2,18,19,1,39,1,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,2,4,6,18,19,1,1,22,1,2,18,21,5,1,4,33,40,1,2,18,20,1,39,1,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,2,4,6,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>4,0,1,1,4,6,0,11,3,1,0,1,2,4,2,0,12,4,3,0,2,4,0,13,5,3,1,0,0,0,4,7,1,13,14,0,18,0,0,6,0,20,0,7,2,0,8,0,20,0,21,0,0,9,21,22,2,0,10,22,24,0,30,2,0,0,32,0,0,0,75,33,0,167,150,35,0,11,12,0,104,37,3,2,0,13,0,37,0,38,3,0,0,102,40,0,3,40,41,0,167,102,42,150,43,0,11,14,0,115,44,2,0,0,150,64,0,11,15,0,129,65,0,3,65,66,0,167,150,68,3,0,6,0,69,3,7,16,0,11,0,0,70,3,0,9,70,71,0,167,72,74,4,2,3,1,17,0,74,0,75,3,4,2,3,2,75,79,0,100,2,0,18,0,100,19,0,190,101,2,4,1,20,101,102,4,1,6,102,190,103,105,3,2,0,13,0,105,0,107,3,0,0,212,108,0,3,108,109,0,220,212,110,114,3,19,0,3,2,114,115,0,119,2,0,18,0,119,19,0,237,120,2,0,20,120,237,121,123,3,2,0,13,0,123,0,125,3,0,0,259,126,0,3,126,127,0,267,259,128,130,3,19,0,3,2,130,132,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SОбработка.ТестированиеПоРазделам.Форма.Форма</bsch:constant>
+					<bsch:constant>SТекущийВопрос,ВыбранныйОтвет,ПоказатьОтвет</bsch:constant>
+					<bsch:constant>SСтруктура</bsch:constant>
+					<bsch:constant>SПослеЗакрытияФормыВопроса</bsch:constant>
+					<bsch:constant>SОписаниеОповещения</bsch:constant>
+					<bsch:constant>SОбработка.ФормаВопроса.Форма.Форма</bsch:constant>
+					<bsch:constant>SСообщениеПользователю</bsch:constant>
+					<bsch:constant>SТекст</bsch:constant>
+					<bsch:constant>SРезультатТестирования</bsch:constant>
+					<bsch:constant>SСообщить</bsch:constant>
+					<bsch:constant>SОчиститьТекущиеВопросы</bsch:constant>
+					<bsch:constant>SРежим</bsch:constant>
+					<bsch:constant>SСледующий</bsch:constant>
+					<bsch:constant>SСлучайныйВопрос</bsch:constant>
+					<bsch:constant>SПоказатьПравильный</bsch:constant>
+					<bsch:constant>SЗавершить</bsch:constant>
+					<bsch:constant>SФорма вернула неизвестный результат: </bsch:constant>
+					<bsch:constant>SПолучитьОтвет</bsch:constant>
+					<bsch:constant>SЕстьНеОтвеченные</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SЗаполнитьВопросыТестирования</bsch:constant>
+					<bsch:variable name="ЭтотОбъект" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:variable name="РаботаСВопросами" isExternal="true"/>
+					<bsch:variable name="ТекущийВопрос" isExternal="true"/>
+					<bsch:variable name="ТекущийРаздел" isExternal="true"/>
+					<bsch:procedure name="ТестированиеПоРазделам" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
+					<bsch:procedure name="ПоказатьФормуВопроса" parametersCount="3" startAddr="7">
+						<bsch:variable name="ТекущийВопрос" isLocal="true" isParam="true"/>
+						<bsch:variable name="Ответ" isLocal="true" isParam="true"/>
+						<bsch:variable name="ПоказатьОтвет" isLocal="true" isParam="true"/>
+						<bsch:variable name="ПараметрыФормы" isLocal="true"/>
+						<bsch:variable name="Оп" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоказатьРезультат" parametersCount="0" startAddr="36">
+						<bsch:variable name="Сообщение" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ПослеЗакрытияФормыВопроса" isExported="true" parametersCount="2" startAddr="62">
+						<bsch:variable name="Результат" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
+						<bsch:variable name="ПоказатьОтвет" isLocal="true"/>
+						<bsch:variable name="Сообщение" isLocal="true"/>
+						<bsch:variable name="Отв" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ТестированиеПоРазделу" parametersCount="1" startAddr="169">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаписатьРаздел" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="СлучайноеТестированиеПоВсем" parametersCount="1" startAddr="222">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>1,2,12,4,3,12,18,20,1,1,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>93,0,0,2,0,3,2,1,93,94,0,0</bsch:cmdOperand>
+					<bsch:constant>SХранилищеНастроек</bsch:constant>
+					<bsch:constant>SЗаписатьНастройку</bsch:constant>
+					<bsch:constant>SТекущийРаздел</bsch:constant>
+					<bsch:constant>SНомерРаздела</bsch:constant>
+					<bsch:variable name="РегистрыСведений" isExternal="true"/>
+					<bsch:procedure name="ЗаписатьРаздел" parametersCount="1" startAddr="0">
+						<bsch:variable name="Раздел" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:TypeId>c4a8aba6-5f49-46d4-8942-86473d139e1e</v8:TypeId>
+						</mf:type>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="ТекущийВопрос">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущий вопрос</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>cfg:CatalogRef.ВопросыИОтветы</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ТекущийРаздел">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущий раздел</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>cfg:CatalogRef.Разделы</v8:Type>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="ТестированиеПоРазделам">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тестирование по разделам</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ТестированиеПоРазделам</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тестирование по разделам</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="ПодготовкаПоРазделу">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подготовка по разделу</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ПодготовкаПоРазделу</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подготовка по разделу</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="СлучайноеТестированиеПоРазделу">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Случайное тестирование по разделу</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ТестированиеПоРазделу</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Случайное тестирование по разделу</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="СлучайноеТестированиеПоВсем">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Случайное тестирование по всем</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>СлучайноеТестированиеПоВсем</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Случайное тестирование по всем</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:field name="ТекущийРаздел" kind="InputField" dataPath="ТекущийРаздел">
+						<mf:titleLocation>Top</mf:titleLocation>
+						<mf:contextMenu name="ТекущийРазделКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:button name="ТестированиеПоРазделам" type="UsualButton" commandName="Form.Command.ТестированиеПоРазделам">
+						<mf:visible>false</mf:visible>
+					</mf:button>
+					<mf:button name="ТестФормыВопроса" type="UsualButton" commandName="Form.Command.ПодготовкаПоРазделу">
+						<mf:visible>false</mf:visible>
+					</mf:button>
+					<mf:button name="ТестированиеПоРазделу" type="UsualButton" commandName="Form.Command.СлучайноеТестированиеПоРазделу"/>
+					<mf:button name="СлучайноеТестированиеПоВсем" type="UsualButton" commandName="Form.Command.СлучайноеТестированиеПоВсем"/>
+				</mf:mainElement>
+			</form>
+		</form>
+	</dataProcessor>
+	<dataProcessor name="ФормаВопроса" id="0d87459b-9086-40bf-9271-26d96c5c312c">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Форма вопроса</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="DataProcessorObject.ФормаВопроса" category="Object">
+			<xr:TypeId>b63cc1d9-3d3f-4707-a25f-f2d11d578829</xr:TypeId>
+			<xr:ValueId>faefe6f0-c80e-4f13-8615-996d36e6bfeb</xr:ValueId>
+		</generatedType>
+		<generatedType name="DataProcessorManager.ФормаВопроса" category="Manager">
+			<xr:TypeId>284df04b-6c73-44a9-8282-5a86d9ed0987</xr:TypeId>
+			<xr:ValueId>b4f40eeb-5a1b-45eb-97f3-1fc9246d39d0</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</objectModule>
+		<form name="Форма" id="293af716-48bc-40c9-b2ba-72b7601a0fb2">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="383">
+					<bsch:cmdOpCode>1,2,2,12,16,1,2,2,12,16,1,3,18,51,16,1,3,12,4,16,1,3,4,2,18,20,1,1,3,3,18,21,5,1,16,1,3,3,4,13,18,21,5,1,16,1,3,18,20,1,1,2,3,12,71,4,24,3,12,24,16,1,2,3,12,71,4,24,3,12,71,24,4,24,3,12,24,16,1,2,3,12,16,1,3,3,12,18,21,5,1,16,1,3,8,33,31,3,18,21,5,1,4,33,69,40,1,2,4,16,1,2,12,12,6,16,39,1,2,3,18,19,5,1,16,1,2,12,12,7,16,1,1,3,3,4,13,18,21,5,1,16,1,2,12,12,2,12,30,2,12,65,29,69,16,1,3,4,16,1,3,18,21,5,1,1,40,1,3,2,4,3,71,24,13,16,1,3,12,3,12,71,4,24,3,12,24,16,1,3,12,7,16,1,3,12,3,12,8,8,6,8,6,18,51,16,1,3,2,4,3,71,24,13,16,1,3,12,7,16,1,3,12,3,12,71,16,1,2,4,3,71,24,13,6,16,1,2,3,12,33,40,1,2,4,3,71,24,13,7,16,39,1,1,2,12,40,1,3,12,6,16,1,3,12,40,1,3,12,3,12,8,8,7,8,7,18,51,16,1,2,4,33,40,1,2,4,3,71,24,13,7,16,39,1,39,1,39,1,1,3,3,4,24,16,1,39,1,3,4,38,1,40,1,2,4,3,71,24,13,6,16,1,3,2,4,3,71,24,13,16,1,3,12,6,16,1,3,12,4,16,1,3,2,4,3,71,24,13,16,1,3,12,4,16,1,3,12,3,12,8,8,6,8,6,18,51,16,1,3,12,6,16,1,3,3,4,24,16,1,39,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>5,0,1,0,0,6,2,1,1,0,8,0,0,2,0,9,0,3,4,0,36,0,6,0,2,5,36,38,1,0,0,7,0,38,0,39,2,1,8,0,0,9,0,39,0,40,2,0,10,40,42,3,2,11,0,12,0,2,13,0,0,43,4,2,11,0,14,0,2,15,0,0,12,0,2,6,0,0,44,5,2,16,0,47,3,2,17,0,18,0,47,0,48,3,0,0,105,3,0,19,0,48,8,0,0,117,49,6,20,0,50,7,21,22,0,0,131,52,6,3,1,1,0,52,0,53,7,21,22,0,0,54,58,4,1,23,0,0,9,0,58,0,70,7,24,22,1,25,154,0,24,0,0,0,0,72,5,23,0,74,4,0,10,0,74,74,307,77,6,7,26,5,0,0,0,0,78,6,27,4,28,0,12,0,4,26,0,0,79,6,22,0,0,80,6,29,6,29,0,0,0,0,0,6,29,0,82,7,7,30,5,0,0,0,0,83,7,22,0,0,84,7,27,4,28,0,0,87,8,30,5,0,0,0,0,0,91,2,4,28,0,252,92,8,30,5,0,0,0,0,0,252,93,96,1,25,298,98,7,31,0,0,100,4,32,296,101,6,29,6,29,0,0,0,0,0,6,29,0,103,2,8,0,294,104,8,30,5,0,0,0,0,0,294,105,296,107,298,109,112,5,5,23,0,0,115,159,117,5,33,0,117,381,118,8,30,5,0,0,0,0,0,120,7,7,30,5,0,0,0,0,121,7,22,0,0,122,7,27,20,0,124,6,7,26,5,0,0,0,0,125,6,27,20,0,127,6,29,6,29,0,0,0,0,0,6,29,0,130,6,22,0,0,132,5,5,23,0,0,133,307,134,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SТекущийВопрос</bsch:constant>
+					<bsch:constant>SВыбранныйОтвет</bsch:constant>
+					<bsch:constant>SЗапрос</bsch:constant>
+					<bsch:constant>SТекст</bsch:constant>
+					<bsch:constant>SВЫБРАТЬ
+	ВопросыИОтветы.Владелец,
+	ВопросыИОтветы.Владелец.Наименование КАК НаименованиеРаздела,
+	ВопросыИОтветы.Владелец.НомерРаздела КАК НомерРаздела,
+	ВопросыИОтветы.НомерВопроса,
+	ВопросыИОтветы.Вопрос,
+	ВопросыИОтветы.ХранилищеКартинки,
+	ВопросыИОтветы.Комментарий
+ИЗ
+	Справочник.ВопросыИОтветы КАК ВопросыИОтветы
+ГДЕ
+	ВопросыИОтветы.Ссылка = &amp;Вопрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВопросыИОтветыОтветы.НомерОтвета КАК НомерОтвета,
+	ВопросыИОтветыОтветы.Ответ,
+	ВопросыИОтветыОтветы.ЭтоПравильный
+ИЗ
+	Справочник.ВопросыИОтветы.Ответы КАК ВопросыИОтветыОтветы
+ГДЕ
+	ВопросыИОтветыОтветы.Ссылка = &amp;Вопрос
+
+УПОРЯДОЧИТЬ ПО
+	НомерОтвета</bsch:constant>
+					<bsch:constant>SУстановитьПараметр</bsch:constant>
+					<bsch:constant>SВопрос</bsch:constant>
+					<bsch:constant>SВыполнитьПакет</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SВыбрать</bsch:constant>
+					<bsch:constant>SСледующий</bsch:constant>
+					<bsch:constant>SНомерРаздела</bsch:constant>
+					<bsch:constant>S. </bsch:constant>
+					<bsch:constant>SНаименованиеРаздела</bsch:constant>
+					<bsch:constant>S.</bsch:constant>
+					<bsch:constant>SНомерВопроса</bsch:constant>
+					<bsch:constant>SВладелец</bsch:constant>
+					<bsch:constant>SХранилищеКартинки</bsch:constant>
+					<bsch:constant>SПолучить</bsch:constant>
+					<bsch:constant>SРазмер</bsch:constant>
+					<bsch:constant>S</bsch:constant>
+					<bsch:constant>SКартинка</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>N1</bsch:constant>
+					<bsch:constant>SКомментарий</bsch:constant>
+					<bsch:constant>SПоказатьОтвет</bsch:constant>
+					<bsch:constant>SОтвет</bsch:constant>
+					<bsch:constant>SЗаголовок</bsch:constant>
+					<bsch:constant>SНомерОтвета</bsch:constant>
+					<bsch:constant>SШрифт</bsch:constant>
+					<bsch:constant>SФлажок</bsch:constant>
+					<bsch:constant>SДоступность</bsch:constant>
+					<bsch:constant>SЭтоПравильный</bsch:constant>
+					<bsch:constant>N10</bsch:constant>
+					<bsch:variable name="ТекущийВопрос" isExternal="true"/>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:variable name="Ответ" isExternal="true"/>
+					<bsch:variable name="Раздел" isExternal="true"/>
+					<bsch:variable name="Вопрос" isExternal="true"/>
+					<bsch:variable name="ТекущийРаздел" isExternal="true"/>
+					<bsch:variable name="АдресКартинки" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:procedure name="ПоказатьВопрос" parametersCount="0" startAddr="0">
+						<bsch:variable name="Запрос" isLocal="true"/>
+						<bsch:variable name="ПакетыЗапроса" isLocal="true"/>
+						<bsch:variable name="ВыборкаВопрос" isLocal="true"/>
+						<bsch:variable name="ДвоичныеДанныеКартинки" isLocal="true"/>
+						<bsch:variable name="ВыборкаОтветы" isLocal="true"/>
+						<bsch:variable name="н" isLocal="true"/>
+						<bsch:variable name="ЭлОтвет" isLocal="true"/>
+						<bsch:variable name="ЭлФлажок" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоместитьВоВременноеХранилище" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="276">
+					<bsch:cmdOpCode>1,3,4,4,18,51,16,1,3,18,19,1,1,22,1,3,4,4,18,51,16,1,3,18,19,1,1,22,1,22,1,2,12,40,1,2,12,12,6,16,1,2,12,12,6,16,39,1,2,12,12,7,16,1,2,12,12,7,16,1,1,2,12,12,6,16,1,2,12,12,6,16,1,18,19,1,1,22,1,3,6,16,1,3,4,18,19,5,1,16,1,2,18,19,5,1,3,18,20,1,1,3,10,7,18,19,1,1,3,18,19,1,1,22,1,22,1,22,1,3,3,12,4,4,100,70,16,1,2,3,12,70,16,1,3,4,16,48,49,4,16,1,49,3,37,40,1,2,4,3,71,24,13,3,3,33,16,1,3,43,39,50,1,22,1,2,4,33,40,1,4,18,19,1,39,1,3,2,2,12,2,18,21,5,1,16,1,3,40,1,3,18,51,16,1,3,12,4,16,1,3,18,20,1,1,3,4,18,51,16,1,3,12,4,16,1,3,18,19,1,39,1,3,18,51,16,1,3,12,4,16,1,3,18,20,1,1,3,4,18,51,16,1,3,12,4,16,1,3,18,19,1,1,1,1,22,1,22,1,3,4,4,18,51,16,1,3,18,19,1,1,22,1,22,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>140,1,0,1,2,2,0,141,1,1,1,141,145,0,150,1,0,3,2,2,0,151,1,1,1,151,152,0,166,0,183,0,4,47,184,1,5,6,0,0,185,1,7,6,0,0,59,187,1,5,6,0,0,188,1,7,6,0,0,190,192,1,8,6,0,0,193,1,9,6,0,0,197,0,5,197,200,0,216,1,0,0,217,2,10,1,7,0,217,0,218,2,1,8,0,218,2,1,11,218,219,2,0,0,3,9,219,221,2,1,10,221,223,0,251,0,284,0,308,1,0,12,13,14,0,0,0,310,3,0,15,0,0,312,2,16,0,0,0,17,0,312,0,2,0,161,313,4,13,2,0,0,0,2,1,0,0,314,2,0,141,1,316,0,366,3,18,0,175,367,19,1,15,367,253,379,1,5,0,21,3,2,20,0,379,0,381,1,221,382,2,0,22,0,383,2,23,24,0,384,2,0,25,384,385,3,0,1,2,0,386,3,0,3,0,387,3,1,1,387,252,389,2,0,22,0,390,2,23,26,0,391,2,0,25,391,392,3,0,1,2,0,393,3,0,27,0,394,3,1,1,394,395,397,398,0,451,0,573,1,0,28,2,2,0,574,1,1,1,574,576,0,591,0,605,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SРежим</bsch:constant>
+					<bsch:constant>SПредыдущий</bsch:constant>
+					<bsch:constant>SСтруктура</bsch:constant>
+					<bsch:constant>SСледующий</bsch:constant>
+					<bsch:constant>SПоказатьОтвет</bsch:constant>
+					<bsch:constant>SКомандаПоказатьПравильный</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>SКомандаОтветить</bsch:constant>
+					<bsch:constant>SФормаКомандаВыборРаздела</bsch:constant>
+					<bsch:constant>SФормаКомандаВыборВопроса</bsch:constant>
+					<bsch:constant>S.jpg</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SИмя</bsch:constant>
+					<bsch:constant>SФлажок</bsch:constant>
+					<bsch:constant>S</bsch:constant>
+					<bsch:constant>SЗаголовок</bsch:constant>
+					<bsch:constant>N1</bsch:constant>
+					<bsch:constant>N10</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SНе выбран ответ!</bsch:constant>
+					<bsch:constant>SДобавитьОтвет</bsch:constant>
+					<bsch:constant>SТекущийВопрос</bsch:constant>
+					<bsch:constant>SСообщениеПользователю</bsch:constant>
+					<bsch:constant>SТекст</bsch:constant>
+					<bsch:constant>SПравильно!</bsch:constant>
+					<bsch:constant>SСообщить</bsch:constant>
+					<bsch:constant>SНеправильно!</bsch:constant>
+					<bsch:constant>SПоказатьПравильный</bsch:constant>
+					<bsch:constant>SЗавершить</bsch:constant>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="АдресКартинки" isExternal="true"/>
+					<bsch:variable name="Ответ" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:variable name="РаботаСВопросами" isExternal="true"/>
+					<bsch:procedure name="КомандаПредыдущий" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="Возвр" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="КомандСледующий" parametersCount="1" startAddr="14">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="Возвр" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КомандаВыборРаздела" parametersCount="1" startAddr="28">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПриОткрытии" parametersCount="1" startAddr="30">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоказатьВопрос" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="КартинкаНажатие" parametersCount="2" startAddr="78">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:variable name="Файл" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПолучитьИмяВременногоФайла" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="ПолучитьИзВременногоХранилища" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="ЗапуститьПриложение" isExternal="true" parametersCount="4" startAddr="0"/>
+					<bsch:procedure name="УдалитьФайлы" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="КомандаВыборВопроса" parametersCount="1" startAddr="114">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПередЗакрытием" parametersCount="2" startAddr="116">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Флажок1ПриИзменении" parametersCount="1" startAddr="118">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ТекНомерЭлемента" isLocal="true"/>
+						<bsch:variable name="н" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КомандаОтветить" parametersCount="1" startAddr="164">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="Правильный" isLocal="true"/>
+						<bsch:variable name="Сообщение" isLocal="true"/>
+						<bsch:variable name="Возвр" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="КомандаПоказатьПравильный" parametersCount="1" startAddr="256">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КомандаЗавершить" parametersCount="1" startAddr="258">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="Возвр" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КомандаСледующийНеправильный" parametersCount="1" startAddr="272">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="КомандаПредыдущийНеправильный" parametersCount="1" startAddr="274">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:TypeId>6fcd4cd7-6a48-48de-97d7-62d0368bb11d</v8:TypeId>
+						</mf:type>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="Раздел">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Раздел</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Вопрос">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вопрос</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="АдресКартинки">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адрес картинки</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ТекущийРаздел">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущий раздел</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>cfg:CatalogRef.Разделы</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ТекущийВопрос">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущий вопрос</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>cfg:CatalogRef.ВопросыИОтветы</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Отвеченные">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отвеченные</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>v8:ValueTable</v8:Type>
+						</mf:type>
+						<mf:columns>
+							<mf:attribute name="Вопрос">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вопрос</v8:content>
+									</v8:item>
+								</mf:title>
+								<mf:type>
+									<v8:Type>cfg:CatalogRef.ВопросыИОтветы</v8:Type>
+								</mf:type>
+							</mf:attribute>
+							<mf:attribute name="НомерОтвета">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Номер ответа</v8:content>
+									</v8:item>
+								</mf:title>
+								<mf:type>
+									<v8:Type>xs:decimal</v8:Type>
+									<v8:NumberQualifiers>
+										<v8:Digits>10</v8:Digits>
+										<v8:FractionDigits>0</v8:FractionDigits>
+										<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+									</v8:NumberQualifiers>
+								</mf:type>
+							</mf:attribute>
+							<mf:attribute name="ПравильныйОтвет">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Правильный ответ</v8:content>
+									</v8:item>
+								</mf:title>
+								<mf:type>
+									<v8:Type>xs:decimal</v8:Type>
+									<v8:NumberQualifiers>
+										<v8:Digits>10</v8:Digits>
+										<v8:FractionDigits>0</v8:FractionDigits>
+										<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+									</v8:NumberQualifiers>
+								</mf:type>
+							</mf:attribute>
+							<mf:attribute name="БылаИспользованаПодсказка">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Была использована подсказка</v8:content>
+									</v8:item>
+								</mf:title>
+								<mf:type>
+									<v8:Type>xs:boolean</v8:Type>
+								</mf:type>
+							</mf:attribute>
+						</mf:columns>
+					</mf:attribute>
+					<mf:attribute name="Флажок1">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок10">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок2">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок3">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок4">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок5">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок6">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок7">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок8">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Флажок9">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Флажок1</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Ответ">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ответ</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ТестЗавершен">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тест завершен</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="СтрРезультатТестирования">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стр результат тестирования</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ПоказыватьРезультат">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Показывать результат</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:boolean</v8:Type>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:parameter name="ТекущийВопрос">
+					<mf:type>
+						<v8:Type>cfg:CatalogRef.ВопросыИОтветы</v8:Type>
+					</mf:type>
+					<mf:key>true</mf:key>
+				</mf:parameter>
+				<mf:parameter name="ВыбранныйОтвет">
+					<mf:type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</mf:type>
+					<mf:key>true</mf:key>
+				</mf:parameter>
+				<mf:parameter name="ПоказатьОтвет">
+					<mf:type>
+						<v8:Type>xs:boolean</v8:Type>
+					</mf:type>
+					<mf:key>true</mf:key>
+				</mf:parameter>
+				<mf:command name="КомандСледующий">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команд следующий</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандСледующий</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команд следующий</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаПредыдущий">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда предыдущий</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаПредыдущий</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда предыдущий</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаВыборРаздела">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда выбор раздела</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаВыборРаздела</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда выбор раздела</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаВыборВопроса">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда выбор вопроса</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаВыборВопроса</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда выбор вопроса</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаОтветить">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда ответить</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаОтветить</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда ответить</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаЗавершить">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда завершить</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаЗавершить</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда завершить</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаПоказатьПравильный">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда показать правильный</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаПоказатьПравильный</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда показать правильный</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаЗакрыть">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда закрыть</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаЗакрыть</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда закрыть</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаСледующийНеправильный">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команд следующий неправильный</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаСледующийНеправильный</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команд следующий</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="КомандаПредыдущийНеправильный">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команд предыдущий неправильный</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>КомандаПредыдущийНеправильный</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команд следующий</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:mainElement>
+					<mf:commandBarLocation>Bottom</mf:commandBarLocation>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+						<mf:autoMenuData>
+							<mf:autofill>false</mf:autofill>
+						</mf:autoMenuData>
+						<mf:button name="ФормаКомандаПредыдущий" type="CommandBarButton" commandName="Form.Command.КомандаПредыдущий">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Назад</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:visible>false</mf:visible>
+						</mf:button>
+						<mf:button name="ФормаКомандаВыборРаздела" type="CommandBarButton" commandName="Form.Command.КомандаВыборРаздела">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Раздел</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:visible>false</mf:visible>
+						</mf:button>
+						<mf:button name="ФормаКомандаВыборВопроса" type="CommandBarButton" commandName="Form.Command.КомандаВыборВопроса">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вопрос</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:visible>false</mf:visible>
+						</mf:button>
+						<mf:button name="ФормаКомандСледующий" type="CommandBarButton" commandName="Form.Command.КомандСледующий">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Следующий</v8:content>
+								</v8:item>
+							</mf:title>
+						</mf:button>
+					</mf:autoCommandBar>
+					<mf:event handler="ОбработкаВыбора" name="ChoiceProcessing"/>
+					<mf:event handler="ОбработкаОповещения" name="NotificationProcessing"/>
+					<mf:event handler="ПриОткрытии" name="OnOpen"/>
+					<mf:event handler="ПередЗакрытием" name="BeforeClose"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:event handler="ПриЗакрытии" name="OnClose"/>
+					<mf:field name="Раздел" kind="InputField" dataPath="Раздел">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:visible>false</mf:visible>
+						<mf:readOnly>true</mf:readOnly>
+						<mf:contextMenu name="РазделКонтекстноеМеню" type="ContextMenu"/>
+						<mf:titleFont ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
+					</mf:field>
+					<mf:field name="Вопрос" kind="InputField" dataPath="Вопрос">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>бдлжлдж.б ю.бю</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:readOnly>true</mf:readOnly>
+						<mf:contextMenu name="ВопросКонтекстноеМеню" type="ContextMenu"/>
+						<mf:titleFont ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
+					</mf:field>
+					<mf:field name="Картинка" kind="PictureField" dataPath="АдресКартинки">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:visible>false</mf:visible>
+						<mf:contextMenu name="КартинкаКонтекстноеМеню" type="ContextMenu"/>
+						<mf:imageData hyperlink="true">
+							<mf:pictureSize>Proportionally</mf:pictureSize>
+							<mf:zoomable>true</mf:zoomable>
+							<mf:border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</mf:border>
+							<mf:height>15</mf:height>
+							<mf:verticalStretch>false</mf:verticalStretch>
+							<mf:event handler="КартинкаНажатие" name="Click"/>
+						</mf:imageData>
+					</mf:field>
+					<mf:group name="ГруппаОтветы" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа ответы</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа ответы</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:group name="ГруппаОтвет1" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок1" kind="CheckBoxField" dataPath="Флажок1">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок1КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ1" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ1КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Ответ1Нажатие" name="Click"/>
+									<mf:event handler="Ответ1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет2" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок2" kind="CheckBoxField" dataPath="Флажок2">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок2КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ2" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ2КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет3" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок3" kind="CheckBoxField" dataPath="Флажок3">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок3КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ3" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ3КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет4" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок4" kind="CheckBoxField" dataPath="Флажок4">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок4КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ4" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ4КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет5" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок5" kind="CheckBoxField" dataPath="Флажок5">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок5КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ5" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ5КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет6" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок6" kind="CheckBoxField" dataPath="Флажок6">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок6КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ6" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ6КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет7" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок7" kind="CheckBoxField" dataPath="Флажок7">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок7КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ7" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ7КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет8" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок8" kind="CheckBoxField" dataPath="Флажок8">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок8КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ8" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ8КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет9" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок9" kind="CheckBoxField" dataPath="Флажок9">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок9КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ9" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ9КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+						<mf:group name="ГруппаОтвет10" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ответ1</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData group="Horizontal">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="Флажок10" kind="CheckBoxField" dataPath="Флажок10">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="Флажок10КонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="Флажок1ПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:decoration name="Ответ10" type="Label">
+								<mf:formattedTitle>
+									<mf:str>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва выа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ывавыа ыва ываждывл ыва ывда ыва ыва ыва ыва ываываыва ыва</v8:content>
+										</v8:item>
+									</mf:str>
+								</mf:formattedTitle>
+								<mf:contextMenu name="Ответ10КонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:event handler="Декорация1Нажатие" name="Click"/>
+									<mf:event handler="Декорация1ОбработкаНавигационнойСсылки" name="URLProcessing"/>
+								</mf:textData>
+							</mf:decoration>
+						</mf:group>
+					</mf:group>
+					<mf:field name="Комментарий" kind="InputField" dataPath="ТекущийВопрос.Комментарий">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="КомментарийКонтекстноеМеню" type="ContextMenu"/>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
+					</mf:field>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:usualData group="Horizontal">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:button name="КомандаОтветить" type="UsualButton" commandName="Form.Command.КомандаОтветить">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ответить</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:height>2</mf:height>
+						</mf:button>
+						<mf:button name="КомандаЗавершить" type="UsualButton" commandName="Form.Command.КомандаЗавершить">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Завершить</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:height>2</mf:height>
+						</mf:button>
+						<mf:button name="КомандаПоказатьПравильный" type="UsualButton" commandName="Form.Command.КомандаПоказатьПравильный">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подсказка</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:height>2</mf:height>
+						</mf:button>
+						<mf:button name="КомандаПредыдущийНеправильный" type="UsualButton" commandName="Form.Command.КомандаПредыдущийНеправильный">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предыдущий</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:visible>false</mf:visible>
+							<mf:height>2</mf:height>
+						</mf:button>
+						<mf:button name="КомандаСледующийНеправильный" type="UsualButton" commandName="Form.Command.КомандаСледующийНеправильный">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Следующий</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:visible>false</mf:visible>
+							<mf:height>2</mf:height>
+						</mf:button>
+					</mf:group>
 				</mf:mainElement>
 			</form>
 		</form>

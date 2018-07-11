@@ -316,6 +316,7 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>ФормаМоб</Form>
+			<Form>ФормаМоб1</Form>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>
