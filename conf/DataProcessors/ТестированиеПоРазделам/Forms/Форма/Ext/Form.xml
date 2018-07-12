@@ -61,6 +61,7 @@
 	<ChildItems>
 		<InputField name="Раздел" id="83">
 			<DataPath>Раздел</DataPath>
+			<Visible>false</Visible>
 			<ReadOnly>true</ReadOnly>
 			<TitleFont ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
 			<TitleLocation>None</TitleLocation>
