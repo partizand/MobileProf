@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ПодготовкаКПрофессионалу" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944" formatVersion="1" containerID="3994b1bd-d884-49e3-9d45-1392ae435c97" defaultLanguage="Language.Русский" version="1.1.7" scriptVariant="Russian">
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ПодготовкаКПрофессионалу" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944" formatVersion="1" containerID="3994b1bd-d884-49e3-9d45-1392ae435c97" defaultLanguage="Language.Русский" version="1.1.8" scriptVariant="Russian">
 	<synonym>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -9735,9 +9735,9 @@
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="468">
-					<bsch:cmdOpCode>1,4,18,19,1,1,22,1,3,2,18,21,5,1,16,1,3,4,3,3,3,3,18,51,16,1,3,4,2,18,51,16,1,4,3,2,10,10,10,3,18,19,1,1,22,1,3,18,51,16,1,3,12,2,18,21,5,1,16,1,3,18,20,1,1,2,18,20,1,1,2,18,20,1,1,18,19,1,1,22,1,3,6,16,1,3,8,33,40,1,45,39,39,1,3,12,4,33,40,1,2,2,18,21,5,1,16,1,2,18,19,5,1,33,40,1,2,4,33,40,1,2,2,2,18,21,5,1,16,1,2,18,19,1,39,1,1,18,19,1,1,45,39,39,1,39,1,3,12,4,33,40,1,3,7,16,39,1,3,12,4,33,40,1,18,19,1,1,45,39,39,1,3,18,51,16,1,3,12,4,3,12,24,16,1,3,18,20,1,1,45,39,1,1,3,2,2,18,21,5,1,16,1,2,3,3,18,19,1,1,22,1,2,18,21,5,1,4,33,40,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,7,16,1,2,12,12,7,16,39,1,2,12,12,7,16,1,2,12,12,7,16,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,6,16,1,1,22,1,2,18,21,5,1,4,33,40,1,2,4,16,1,2,2,18,20,1,1,2,18,19,1,39,1,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,18,19,1,1,2,4,6,18,19,1,1,22,1,2,18,21,5,1,4,33,40,1,2,18,20,1,1,2,4,16,39,1,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,18,19,1,1,2,4,6,18,19,1,1,22,1,2,18,21,5,1,4,35,40,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,2,4,6,18,19,1,39,1,1,22,1,18,19,1,1,22,1,4,2,12,18,19,5,1,2,12,33,40,1,18,19,1,39,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>4,0,1,1,4,6,0,11,3,0,0,1,0,11,0,12,4,2,0,1,2,3,5,3,0,13,5,4,1,2,5,0,14,6,4,2,0,0,0,5,7,1,14,15,0,19,0,0,7,0,20,0,8,0,0,9,0,20,0,21,0,0,10,21,23,0,0,11,23,26,0,0,12,26,27,0,4,27,29,0,40,2,0,0,42,0,0,0,93,43,0,209,192,45,0,13,14,0,146,47,3,0,0,15,0,47,0,48,3,0,6,0,48,0,144,50,4,16,0,135,51,5,0,5,1,17,0,51,0,52,5,1,7,52,135,53,55,0,3,55,56,0,209,144,57,192,58,0,13,18,0,157,59,2,0,0,192,79,0,13,19,0,171,80,0,3,80,81,0,209,192,83,3,0,7,0,84,3,8,20,0,13,0,0,85,3,0,10,85,86,0,209,87,89,4,0,3,1,21,0,89,0,90,3,4,2,3,2,90,94,0,115,0,0,1,0,115,22,0,251,116,6,23,24,0,0,117,6,25,24,0,0,118,6,26,24,0,0,119,6,27,24,0,0,120,6,28,24,0,0,281,122,6,23,24,0,0,123,6,25,24,0,0,124,6,26,24,0,0,125,6,27,24,0,0,126,6,28,24,0,0,127,128,0,144,0,0,1,0,144,22,0,309,145,4,16,0,146,0,5,1,29,146,147,5,1,7,147,309,148,150,3,0,0,15,0,150,0,152,3,0,0,331,153,0,3,153,154,0,343,331,155,157,0,4,157,159,3,22,0,3,2,159,160,0,164,0,0,1,0,164,22,0,364,165,0,0,29,165,166,4,30,0,364,167,169,3,0,0,15,0,169,0,171,3,0,0,386,172,0,3,172,173,0,398,386,174,175,0,4,175,176,3,22,0,3,2,176,178,0,182,0,0,1,0,182,22,0,439,183,3,0,0,15,0,183,0,185,3,0,0,430,186,0,3,186,187,0,440,430,188,190,3,22,0,3,2,190,439,192,194,0,198,0,4,198,199,0,203,31,7,32,2,13,0,203,8,33,0,465,204,0,3,204,465,206,208,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="447">
+					<bsch:cmdOpCode>1,4,18,19,1,1,22,1,3,2,18,21,5,1,16,1,3,4,3,3,3,3,18,51,16,1,3,4,2,18,51,16,1,4,3,2,10,10,10,3,18,19,1,1,22,1,3,18,51,16,1,3,12,2,18,21,5,1,16,1,3,18,20,1,1,2,18,20,1,1,2,18,20,1,1,18,19,1,1,22,1,3,6,16,1,3,8,33,40,1,45,39,39,1,3,12,4,33,40,1,2,2,18,21,5,1,16,1,2,18,19,5,1,33,40,1,18,19,1,1,45,39,39,1,39,1,3,12,4,33,40,1,3,7,16,39,1,3,12,4,33,40,1,18,19,1,1,45,39,39,1,3,18,51,16,1,3,12,4,3,12,24,16,1,3,18,20,1,1,45,39,1,1,3,2,2,18,21,5,1,16,1,2,3,3,18,19,1,1,22,1,2,18,21,5,1,4,33,40,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,7,16,1,2,12,12,7,16,39,1,2,12,12,7,16,1,2,12,12,7,16,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,6,16,1,1,22,1,2,18,21,5,1,4,33,40,1,2,4,16,1,2,2,18,20,1,1,2,18,19,1,39,1,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,18,19,1,1,2,4,6,18,19,1,1,22,1,2,18,21,5,1,4,33,40,1,2,18,20,1,1,2,4,16,39,1,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,18,19,1,1,2,4,6,18,19,1,1,22,1,2,18,21,5,1,4,35,40,1,2,2,18,21,5,1,16,1,2,8,33,40,1,18,19,1,1,45,39,39,1,1,2,4,6,18,19,1,39,1,1,22,1,18,19,1,1,22,1,4,2,12,18,19,5,1,2,12,33,40,1,18,19,1,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>4,0,1,1,4,6,0,11,3,0,0,1,0,11,0,12,4,2,0,1,2,3,5,3,0,13,5,4,1,2,5,0,14,6,4,2,0,0,0,5,7,1,14,15,0,19,0,0,7,0,20,0,8,0,0,9,0,20,0,21,0,0,10,21,23,0,0,11,23,26,0,0,12,26,27,0,4,27,29,0,40,2,0,0,42,0,0,0,93,43,0,188,171,45,0,13,14,0,125,47,3,0,0,15,0,47,0,48,3,0,6,0,48,0,123,55,0,3,55,56,0,188,123,57,171,58,0,13,16,0,136,59,2,0,0,171,79,0,13,17,0,150,80,0,3,80,81,0,188,171,83,3,0,7,0,84,3,8,18,0,13,0,0,85,3,0,10,85,86,0,188,87,89,4,0,3,1,19,0,89,0,90,3,4,2,3,2,90,94,0,115,0,0,1,0,115,20,0,230,116,4,21,22,0,0,117,4,23,22,0,0,118,4,24,22,0,0,119,4,25,22,0,0,120,4,26,22,0,0,260,122,4,21,22,0,0,123,4,23,22,0,0,124,4,24,22,0,0,125,4,25,22,0,0,126,4,26,22,0,0,127,128,0,144,0,0,1,0,144,20,0,288,145,5,27,0,146,0,6,1,28,146,147,6,1,8,147,288,148,150,3,0,0,15,0,150,0,152,3,0,0,310,153,0,3,153,154,0,322,310,155,157,0,4,157,159,3,20,0,3,2,159,160,0,164,0,0,1,0,164,20,0,343,165,0,0,28,165,166,5,29,0,343,167,169,3,0,0,15,0,169,0,171,3,0,0,365,172,0,3,172,173,0,377,365,174,175,0,4,175,176,3,20,0,3,2,176,178,0,182,0,0,1,0,182,20,0,418,183,3,0,0,15,0,183,0,185,3,0,0,409,186,0,3,186,187,0,419,409,188,190,3,20,0,3,2,190,418,192,194,0,198,0,4,198,199,0,203,30,7,31,2,13,0,203,8,32,0,444,204,0,3,204,444,206,208,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SОбработка.ТестированиеПоРазделам.Форма.Форма</bsch:constant>
 					<bsch:constant>SЕстьНеОтвеченные</bsch:constant>
 					<bsch:constant>SТекущийВопрос,ВыбранныйОтвет,ПоказатьОтвет, НеОтвеченных</bsch:constant>
@@ -9754,8 +9754,6 @@
 					<bsch:constant>SРежим</bsch:constant>
 					<bsch:constant>SСледующий</bsch:constant>
 					<bsch:constant>SСлучайныйВопрос</bsch:constant>
-					<bsch:constant>SПоРазделу</bsch:constant>
-					<bsch:constant>SСледующийРаздел</bsch:constant>
 					<bsch:constant>SПоказатьПравильный</bsch:constant>
 					<bsch:constant>SЗавершить</bsch:constant>
 					<bsch:constant>SФорма вернула неизвестный результат: </bsch:constant>
@@ -9767,6 +9765,7 @@
 					<bsch:constant>SТекущийРаздел</bsch:constant>
 					<bsch:constant>SСлучайноеТестированиеПоВсем</bsch:constant>
 					<bsch:constant>SТестированиеПоРазделу</bsch:constant>
+					<bsch:constant>SПоРазделу</bsch:constant>
 					<bsch:constant>SЗаполнитьВопросыТестирования</bsch:constant>
 					<bsch:constant>SПоВсем</bsch:constant>
 					<bsch:constant>SЗавершить тестирование?</bsch:constant>
@@ -9776,9 +9775,9 @@
 					<bsch:variable name="ЭтотОбъект" isExternal="true"/>
 					<bsch:variable name="ЭтаФорма" isExternal="true"/>
 					<bsch:variable name="ТекущийВопрос" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
 					<bsch:variable name="РежимРаботы" isExternal="true"/>
 					<bsch:variable name="ТекущийРаздел" isExternal="true"/>
-					<bsch:variable name="Элементы" isExternal="true"/>
 					<bsch:variable name="РежимДиалогаВопрос" isExternal="true"/>
 					<bsch:variable name="КодВозвратаДиалога" isExternal="true"/>
 					<bsch:procedure name="ТестированиеПоРазделам" parametersCount="1" startAddr="0">
@@ -9800,7 +9799,7 @@
 					<bsch:procedure name="ПоказатьРезультат" parametersCount="0" startAddr="45">
 						<bsch:variable name="Сообщение" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ЗаполнитьВидимость" parametersCount="0" startAddr="211"/>
+					<bsch:procedure name="ЗаполнитьВидимость" parametersCount="0" startAddr="190"/>
 					<bsch:procedure name="ПослеЗакрытияФормыВопроса" isExported="true" parametersCount="2" startAddr="80">
 						<bsch:variable name="Результат" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
@@ -9811,24 +9810,24 @@
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="ПустойВопрос" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ТестированиеПоРазделу" parametersCount="1" startAddr="263">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
 					<bsch:procedure name="ЗаписатьРаздел" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="ТестированиеПоРазделу" parametersCount="1" startAddr="284">
+					<bsch:procedure name="СлучайноеТестированиеПоВсем" parametersCount="1" startAddr="324">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="СлучайноеТестированиеПоВсем" parametersCount="1" startAddr="345">
+					<bsch:procedure name="ПродолжитьСлучайноеТестирование" parametersCount="1" startAddr="379">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ПродолжитьСлучайноеТестирование" parametersCount="1" startAddr="400">
-						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
-						<bsch:paramsDefValue/>
-					</bsch:procedure>
-					<bsch:procedure name="ПриОткрытии" parametersCount="1" startAddr="442">
+					<bsch:procedure name="ПриОткрытии" parametersCount="1" startAddr="421">
 						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ЗавершитьСлучайноеТестирование" parametersCount="1" startAddr="448">
+					<bsch:procedure name="ЗавершитьСлучайноеТестирование" parametersCount="1" startAddr="427">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
