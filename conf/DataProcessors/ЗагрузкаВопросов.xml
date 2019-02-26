@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
-	<DataProcessor uuid="14c3bede-a41c-4e77-9d61-682bf25d747c">
+	<DataProcessor uuid="d4d7df7f-0794-445d-922c-5e6a419b8723">
 		<InternalInfo>
-			<xr:GeneratedType name="DataProcessorObject.ЗагрузкаОтветов" category="Object">
-				<xr:TypeId>37897ddc-5211-4555-930b-0abfe0012fc3</xr:TypeId>
-				<xr:ValueId>e4dd3da2-ded4-453d-89a0-786d051c3cf7</xr:ValueId>
+			<xr:GeneratedType name="DataProcessorObject.ЗагрузкаВопросов" category="Object">
+				<xr:TypeId>7f4a3ce5-6db7-47e9-a1e2-eacd21e22834</xr:TypeId>
+				<xr:ValueId>b1d79d23-cfb9-402e-99cb-a20fc9677844</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DataProcessorManager.ЗагрузкаОтветов" category="Manager">
-				<xr:TypeId>078f4725-a76d-4858-a181-987febed35aa</xr:TypeId>
-				<xr:ValueId>bcfa11f9-e239-4562-ba5c-372fd8b17055</xr:ValueId>
+			<xr:GeneratedType name="DataProcessorManager.ЗагрузкаВопросов" category="Manager">
+				<xr:TypeId>c68e45da-8780-44ca-90bf-e55cb41d41a4</xr:TypeId>
+				<xr:ValueId>eb5b701d-f56d-4262-91c0-f5821887fa5d</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ЗагрузкаОтветов</Name>
+			<Name>ЗагрузкаВопросов</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузка ответов</v8:content>
+					<v8:content>Загрузка вопросов</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment/>
+			<Comment>Загрузка вопросов из txt</Comment>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>DataProcessor.ЗагрузкаОтветов.Form.Форма</DefaultForm>
+			<DefaultForm>DataProcessor.ЗагрузкаВопросов.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
