@@ -9,6 +9,18 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<ChildItems>
+		<LabelDecoration name="Декорация1" id="6">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка вопросов из txt файла. Происходит очистка всей базы. Сделано для загрузки вопросов УТ</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="8"/>
+		</LabelDecoration>
+	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>

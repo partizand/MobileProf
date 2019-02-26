@@ -44,7 +44,7 @@
 		<Metadata name="CommonModule.РаботаСВопросами.Module" id="3f67fc6c-cb6c-4a6f-98b3-42206b2de8b7.0" configVersion="970a373a70e1a44cb26366f8cc1c2a2000000000"/>
 		<Metadata name="CommonModule.РаботаСФайлами" id="f400c3d8-7a2b-4114-9dd7-aee4c03ce6e3" configVersion="439921df51554c4a82b6ea80db52f06800000000"/>
 		<Metadata name="CommonModule.РаботаСФайлами.Module" id="f400c3d8-7a2b-4114-9dd7-aee4c03ce6e3.0" configVersion="a5d0f1e1d2410447b04356702a55249500000000"/>
-		<Metadata name="Configuration.ПодготовкаКПрофессионалу" id="3994b1bd-d884-49e3-9d45-1392ae435c97" configVersion="66b16a463a8a154ab93f98eee9bbca8900000000"/>
+		<Metadata name="Configuration.ПодготовкаКПрофессионалу" id="3994b1bd-d884-49e3-9d45-1392ae435c97" configVersion="ea375094d3c2a14099b8968fba05e35000000000"/>
 		<Metadata name="Configuration.ПодготовкаКПрофессионалу.ClientApplicationInterface" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944.b" configVersion="763c91f957e33d409f1fccfb6222f21d00000000"/>
 		<Metadata name="Configuration.ПодготовкаКПрофессионалу.HomePageWorkArea" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944.8" configVersion="e4d30453333b7d4283782e9e931f4fd200000000"/>
 		<Metadata name="Configuration.ПодготовкаКПрофессионалу.MainSectionCommandInterface" id="47e1ceb5-4da3-484b-ba68-5bceca4b3944.9" configVersion="94249d34f5631b4999f3883f2bfb207800000000"/>
@@ -52,8 +52,8 @@
 		<Metadata name="DataProcessor.ВыгрузкаОтветов.Form.Форма" id="1f4f1f2f-63ab-4338-8c61-844a6d025085" configVersion="3f6edec8aa440847879b94fa069d836000000000"/>
 		<Metadata name="DataProcessor.ВыгрузкаОтветов.Form.Форма.Form" id="1f4f1f2f-63ab-4338-8c61-844a6d025085.0" configVersion="3dbb3914d9053744ae6134a09f4523c300000000"/>
 		<Metadata name="DataProcessor.ЗагрузкаВопросов" id="d4d7df7f-0794-445d-922c-5e6a419b8723" configVersion="5dccbaa529d327448e5216e3d52b09d600000000"/>
-		<Metadata name="DataProcessor.ЗагрузкаВопросов.Form.Форма" id="8b550234-8010-4567-bd47-3063bafb506a" configVersion="d12862e0f6597b47a5249db66715c95900000000"/>
-		<Metadata name="DataProcessor.ЗагрузкаВопросов.Form.Форма.Form" id="8b550234-8010-4567-bd47-3063bafb506a.0" configVersion="4cfe5627b1407841804ce7e92239a89e00000000"/>
+		<Metadata name="DataProcessor.ЗагрузкаВопросов.Form.Форма" id="8b550234-8010-4567-bd47-3063bafb506a" configVersion="f1715cc7d180ad46a36350f4d4e8234900000000"/>
+		<Metadata name="DataProcessor.ЗагрузкаВопросов.Form.Форма.Form" id="8b550234-8010-4567-bd47-3063bafb506a.0" configVersion="deaf0c5281dfa34f886f7ba3c8fa5f3800000000"/>
 		<Metadata name="DataProcessor.ЗагрузкаВопросов.ObjectModule" id="d4d7df7f-0794-445d-922c-5e6a419b8723.0" configVersion="64363cfb09af0d4892641a40d282db1800000000"/>
 		<Metadata name="DataProcessor.ЗагрузкаОтветов" id="14c3bede-a41c-4e77-9d61-682bf25d747c" configVersion="21254b812e031841b71f4e42b8e0c17700000000"/>
 		<Metadata name="DataProcessor.ЗагрузкаОтветов.Form.Форма" id="aa07bc20-04a5-4ea1-844a-411f504695d3" configVersion="e4bda8569b4db84eba2f56ea5963abd300000000"/>
