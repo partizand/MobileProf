@@ -1118,6 +1118,9 @@
 					</mf:field>
 					<mf:field name="Вопрос" kind="InputField" dataPath="Объект.Вопрос">
 						<mf:contextMenu name="ВопросКонтекстноеМеню" type="ContextMenu"/>
+						<mf:inputData>
+							<mf:multiLine>true</mf:multiLine>
+						</mf:inputData>
 					</mf:field>
 					<mf:table name="Ответы" dataPath="Объект.Ответы">
 						<mf:representation>List</mf:representation>
@@ -9647,6 +9650,12 @@
 			<bsch:cmdOperand>0,0</bsch:cmdOperand>
 		</objectModule>
 		<defaultForm>DataProcessor.ВыгрузкаОтветов.Form.Форма</defaultForm>
+		<explanation>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выгружает вопросы и ответы в файл xml</v8:content>
+			</v8:item>
+		</explanation>
 		<form name="Форма" id="1f4f1f2f-63ab-4338-8c61-844a6d025085">
 			<synonym>
 				<v8:item>
