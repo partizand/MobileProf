@@ -38,6 +38,7 @@
 		<InputField name="Вопрос" id="13">
 			<DataPath>Объект.Вопрос</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<MultiLine>true</MultiLine>
 			<ContextMenu name="ВопросКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ВопросРасширеннаяПодсказка" id="15"/>
 		</InputField>

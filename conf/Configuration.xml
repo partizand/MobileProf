@@ -154,6 +154,7 @@
 			<Enum>ДействиеВопроса</Enum>
 			<Report>ТекущийРезультатТестирования</Report>
 			<Report>Отчет1</Report>
+			<Report>СписокВопросов</Report>
 			<DataProcessor>Тестирование</DataProcessor>
 			<DataProcessor>ЗагрузкаОтветов</DataProcessor>
 			<DataProcessor>Подготовка</DataProcessor>

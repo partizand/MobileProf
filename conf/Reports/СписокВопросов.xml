@@ -1,39 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
-	<DataProcessor uuid="e838db64-a1c7-44a1-9125-1cc2392ffdf0">
+	<Report uuid="df0c6bbe-5844-469b-8c90-714fb85aa0ab">
 		<InternalInfo>
-			<xr:GeneratedType name="DataProcessorObject.ВыгрузкаОтветов" category="Object">
-				<xr:TypeId>e97269fa-0afa-43e5-89bb-083e3b4bb5d7</xr:TypeId>
-				<xr:ValueId>9a047f2a-9516-44c3-aa71-f30a2bdafc93</xr:ValueId>
+			<xr:GeneratedType name="ReportObject.СписокВопросов" category="Object">
+				<xr:TypeId>4105be46-b9e5-4527-ac19-4e08fa2b4c98</xr:TypeId>
+				<xr:ValueId>2959eea7-4a35-4fa9-bdc1-4c84463d0d2b</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DataProcessorManager.ВыгрузкаОтветов" category="Manager">
-				<xr:TypeId>a4b87e70-2d75-4c33-a51e-c04623724dfe</xr:TypeId>
-				<xr:ValueId>9befefb8-54ac-4ded-af43-c05da0b63aa0</xr:ValueId>
+			<xr:GeneratedType name="ReportManager.СписокВопросов" category="Manager">
+				<xr:TypeId>b9fdb490-c7df-46dc-8d47-544761b28752</xr:TypeId>
+				<xr:ValueId>aec4c763-f00c-482d-a9a3-e7b5b18c41bf</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ВыгрузкаОтветов</Name>
+			<Name>СписокВопросов</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выгрузка ответов</v8:content>
+					<v8:content>Список вопросов</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>DataProcessor.ВыгрузкаОтветов.Form.Форма</DefaultForm>
+			<DefaultForm/>
 			<AuxiliaryForm/>
+			<MainDataCompositionSchema>Report.СписокВопросов.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<VariantsStorage/>
+			<SettingsStorage/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
-			<Explanation>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выгружает вопросы и ответы в файл xml</v8:content>
-				</v8:item>
-			</Explanation>
+			<Explanation/>
 		</Properties>
 		<ChildObjects>
-			<Form>Форма</Form>
+			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
 		</ChildObjects>
-	</DataProcessor>
+	</Report>
 </MetaDataObject>

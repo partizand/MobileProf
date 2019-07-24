@@ -19,6 +19,11 @@
 			<CommandName>Form.Command.КомандаВыгрузить</CommandName>
 			<ExtendedTooltip name="КомандаВыгрузитьРасширеннаяПодсказка" id="2"/>
 		</Button>
+		<Button name="ФормаВыгрузитьМодально" id="6">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ВыгрузитьМодально</CommandName>
+			<ExtendedTooltip name="ФормаВыгрузитьМодальноРасширеннаяПодсказка" id="7"/>
+		</Button>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -59,6 +64,21 @@
 			</ToolTip>
 			<Action>КомандаВыгрузить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьМодально" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить модально</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить модально</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьМодально</Action>
 		</Command>
 	</Commands>
 </Form>
