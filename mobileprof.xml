@@ -67,6 +67,7 @@
 		<content>InformationRegister.ХранилищеНастроек</content>
 		<content>DataProcessor.ЗагрузкаВопросов</content>
 		<content>Catalog.ВопросыИОтветыПрисоединенныеФайлы</content>
+		<content>DataProcessor.ЗагрузкаКартинок</content>
 	</subsystem>
 	<commonModule name="РаботаСФайлами" id="f400c3d8-7a2b-4114-9dd7-aee4c03ce6e3">
 		<synonym>
@@ -756,6 +757,56 @@
 			<bsch:procedure name="ПолучитьНавигационнуюСсылку" isFunction="true" isExternal="true" parametersCount="3" startAddr="0"/>
 		</serverModule>
 	</commonModule>
+	<commonModule name="ОбщегоНазначения" id="b33a3039-cc4d-47c1-a67f-81d4ab308ac3">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общего назначения</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,3,18,19,5,1,16,1,3,2,12,18,51,16,1,3,3,18,20,1,1,3,3,12,18,19,5,1,16,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>3,1,0,1,1,0,3,0,4,2,0,0,1,1,0,5,2,1,1,2,5,6,3,2,3,1,2,0,6,0,7,3,0,0,35,9,0,0</bsch:cmdOperand>
+			<bsch:constant>SMD5</bsch:constant>
+			<bsch:constant>SХешированиеДанных</bsch:constant>
+			<bsch:constant>SДобавить</bsch:constant>
+			<bsch:constant>SХешСумма</bsch:constant>
+			<bsch:variable name="ХешФункция" isExternal="true"/>
+			<bsch:procedure name="ПолучитьХешФайла" isFunction="true" isExported="true" parametersCount="1" startAddr="0">
+				<bsch:variable name="АдресХранилища" isLocal="true" isParam="true"/>
+				<bsch:variable name="ДвоичныеДанные" isLocal="true"/>
+				<bsch:variable name="Хеш" isLocal="true"/>
+				<bsch:variable name="ХешСтрока" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьИзВременногоХранилища" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="Base64Строка" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+		</serverModule>
+	</commonModule>
+	<commonModule name="ОбщегоНазначенияВызовСервера" id="a3d5b0be-be16-44a9-a649-8a31a14f0597">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общего назначения вызов сервера</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,2,12,4,4,18,21,5,1,17,45,39,1,22,1,2,12,4,3,18,20,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>3,0,0,2,3,2,1,0,3,0,0,12,5,0,9,0,0,2,0,2,4,9,11,0,0</bsch:cmdOperand>
+			<bsch:constant>SХранилищеНастроек</bsch:constant>
+			<bsch:constant>SПолучитьНастройку</bsch:constant>
+			<bsch:constant>SКаталогЗагрузкиКартинок</bsch:constant>
+			<bsch:constant>S</bsch:constant>
+			<bsch:constant>SЗаписатьНастройку</bsch:constant>
+			<bsch:variable name="РегистрыСведений" isExternal="true"/>
+			<bsch:procedure name="ПолучитьКатлогЗагрузкиКартинок" isFunction="true" isExported="true" parametersCount="0" startAddr="0"/>
+			<bsch:procedure name="ЗаписатьКаталогЗагрузкиКартинок" isExported="true" parametersCount="1" startAddr="14">
+				<bsch:variable name="Каталог" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
 	<commonForm name="ФормаВопроса" id="fb997662-8c24-453f-bac4-83d478779681">
 		<synonym>
 			<v8:item>
@@ -845,6 +896,7 @@
 		</objectModule>
 		<foldersOnTop>true</foldersOnTop>
 		<owner>Catalog.Разделы</owner>
+		<descriptionLength>50</descriptionLength>
 		<standardAttribute name="PredefinedDataName">
 			<passwordMode>false</passwordMode>
 			<markNegatives>false</markNegatives>
@@ -980,11 +1032,11 @@
 			<quickChoice>auto</quickChoice>
 			<choiceForm/>
 		</standardAttribute>
+		<inputByString>НомерВопроса</inputByString>
 		<inputByString>Description</inputByString>
-		<inputByString>Code</inputByString>
 		<defaultChoiceForm>Catalog.ВопросыИОтветы.Form.ФормаВыбора</defaultChoiceForm>
 		<defaultObjectForm>Catalog.ВопросыИОтветы.Form.ФормаЭлемента</defaultObjectForm>
-		<defaultListForm>Catalog.ВопросыИОтветы.Form.ФормаСписка</defaultListForm>
+		<defaultListForm>Catalog.ВопросыИОтветы.Form.ФормаСпискаМоя</defaultListForm>
 		<attribute name="НомерВопроса" id="93508ee8-afd9-4281-b035-d25fb02c6383">
 			<synonym>
 				<v8:item>
@@ -1360,98 +1412,166 @@
 						<mf:visible>false</mf:visible>
 						<mf:contextMenu name="КодКонтекстноеМеню" type="ContextMenu"/>
 					</mf:field>
+					<mf:group name="Группа3" type="UsualGroup">
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="НомерВопроса" kind="InputField" dataPath="Объект.НомерВопроса">
+							<mf:contextMenu name="НомерВопросаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Владелец" kind="InputField" dataPath="Объект.Owner">
+							<mf:contextMenu name="ВладелецКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:group>
 					<mf:field name="Наименование" kind="InputField" dataPath="Объект.Description">
 						<mf:visible>false</mf:visible>
 						<mf:contextMenu name="НаименованиеКонтекстноеМеню" type="ContextMenu"/>
 					</mf:field>
-					<mf:field name="Владелец" kind="InputField" dataPath="Объект.Owner">
-						<mf:contextMenu name="ВладелецКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
-					<mf:field name="НомерВопроса" kind="InputField" dataPath="Объект.НомерВопроса">
-						<mf:contextMenu name="НомерВопросаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
 					<mf:field name="Вопрос" kind="InputField" dataPath="Объект.Вопрос">
 						<mf:contextMenu name="ВопросКонтекстноеМеню" type="ContextMenu"/>
 						<mf:inputData>
-							<mf:multiLine>true</mf:multiLine>
+							<mf:autoMaxWidth>false</mf:autoMaxWidth>
 						</mf:inputData>
 					</mf:field>
-					<mf:table name="Ответы" dataPath="Объект.Ответы">
-						<mf:representation>List</mf:representation>
-						<mf:autoInsertNewRow>true</mf:autoInsertNewRow>
-						<mf:autoCommandBar name="ОтветыКоманднаяПанель" type="AutoCommandBar"/>
-						<mf:contextMenu name="ОтветыКонтекстноеМеню" type="ContextMenu"/>
-						<mf:field name="ОтветыНомерСтроки" kind="LabelField" dataPath="Объект.Ответы.LineNumber">
-							<mf:visible>false</mf:visible>
-							<mf:contextMenu name="ОтветыНомерСтрокиКонтекстноеМеню" type="ContextMenu"/>
-						</mf:field>
-						<mf:field name="ОтветыЭтоПравильный" kind="CheckBoxField" dataPath="Объект.Ответы.ЭтоПравильный">
-							<mf:titleLocation>None</mf:titleLocation>
-							<mf:contextMenu name="ОтветыЭтоПравильныйКонтекстноеМеню" type="ContextMenu"/>
-						</mf:field>
-						<mf:field name="ОтветыНомерОтвета" kind="InputField" dataPath="Объект.Ответы.НомерОтвета">
-							<mf:title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>№</v8:content>
-								</v8:item>
-							</mf:title>
-							<mf:contextMenu name="ОтветыНомерОтветаКонтекстноеМеню" type="ContextMenu"/>
-						</mf:field>
-						<mf:field name="ОтветыОтвет" kind="InputField" dataPath="Объект.Ответы.Ответ">
-							<mf:contextMenu name="ОтветыОтветКонтекстноеМеню" type="ContextMenu"/>
-							<mf:inputData>
-								<mf:multiLine>true</mf:multiLine>
-							</mf:inputData>
-						</mf:field>
-					</mf:table>
-					<mf:field name="ПолеКартинка" kind="PictureField" dataPath="РеквизитКартинка">
-						<mf:titleLocation>None</mf:titleLocation>
-						<mf:contextMenu name="ПолеКартинкаКонтекстноеМеню" type="ContextMenu"/>
-						<mf:imageData>
-							<mf:pictureSize>Proportionally</mf:pictureSize>
-						</mf:imageData>
-					</mf:field>
-					<mf:group name="Группа1" type="UsualGroup">
-						<mf:usualData group="Horizontal">
+					<mf:group name="ГруппаОтветы" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа ответы</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа ответы</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData representation="None">
 							<mf:showTitle>false</mf:showTitle>
 						</mf:usualData>
-						<mf:button name="КнопкаДобавитьКартинку" type="UsualButton" commandName="Form.Command.ДобавитьКартинку">
-							<mf:title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Добавить картинку</v8:content>
-								</v8:item>
-							</mf:title>
-						</mf:button>
-						<mf:button name="КнопкаУдалитьКартинку" type="UsualButton" commandName="Form.Command.УдалитьКартинку">
-							<mf:title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Удалить картинку</v8:content>
-								</v8:item>
-							</mf:title>
-						</mf:button>
+						<mf:table name="Ответы" dataPath="Объект.Ответы">
+							<mf:representation>List</mf:representation>
+							<mf:autoInsertNewRow>true</mf:autoInsertNewRow>
+							<mf:heightControlVariant>UseContentHeight</mf:heightControlVariant>
+							<mf:autoCommandBar name="ОтветыКоманднаяПанель" type="AutoCommandBar"/>
+							<mf:contextMenu name="ОтветыКонтекстноеМеню" type="ContextMenu"/>
+							<mf:field name="ОтветыНомерСтроки" kind="LabelField" dataPath="Объект.Ответы.LineNumber">
+								<mf:visible>false</mf:visible>
+								<mf:contextMenu name="ОтветыНомерСтрокиКонтекстноеМеню" type="ContextMenu"/>
+							</mf:field>
+							<mf:field name="ОтветыЭтоПравильный" kind="CheckBoxField" dataPath="Объект.Ответы.ЭтоПравильный">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="ОтветыЭтоПравильныйКонтекстноеМеню" type="ContextMenu"/>
+							</mf:field>
+							<mf:field name="ОтветыНомерОтвета" kind="InputField" dataPath="Объект.Ответы.НомерОтвета">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>№</v8:content>
+									</v8:item>
+								</mf:title>
+								<mf:contextMenu name="ОтветыНомерОтветаКонтекстноеМеню" type="ContextMenu"/>
+							</mf:field>
+							<mf:field name="ОтветыОтвет" kind="InputField" dataPath="Объект.Ответы.Ответ">
+								<mf:contextMenu name="ОтветыОтветКонтекстноеМеню" type="ContextMenu"/>
+								<mf:inputData>
+									<mf:multiLine>true</mf:multiLine>
+								</mf:inputData>
+							</mf:field>
+						</mf:table>
 					</mf:group>
-					<mf:field name="Комментарий" kind="InputField" dataPath="Объект.Комментарий">
-						<mf:contextMenu name="КомментарийКонтекстноеМеню" type="ContextMenu"/>
-						<mf:inputData>
-							<mf:multiLine>true</mf:multiLine>
-							<mf:width>50</mf:width>
-						</mf:inputData>
-					</mf:field>
-					<mf:field name="ИзображениеПодсказки" kind="PictureField" dataPath="АдресКартинкиПодсказки">
-						<mf:titleLocation>None</mf:titleLocation>
-						<mf:contextMenu name="ИзображениеПодсказкиКонтекстноеМеню" type="ContextMenu"/>
-						<mf:imageData>
-							<mf:pictureSize>Proportionally</mf:pictureSize>
-						</mf:imageData>
-					</mf:field>
-					<mf:field name="КартинкаПодсказки" kind="InputField" dataPath="Объект.КартинкаПодсказки">
-						<mf:contextMenu name="КартинкаПодсказкиКонтекстноеМеню" type="ContextMenu"/>
-						<mf:event handler="КартинкаПодсказкиПриИзменении" name="OnChange"/>
-					</mf:field>
-					<mf:group name="Группа2" type="UsualGroup"/>
+					<mf:group name="ГруппаКартинкаВопроса" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Картинка к вопросу</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа картинка вопроса</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="Vertical">
+							<mf:behavior>Collapsible</mf:behavior>
+							<mf:collapsedTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Картинка к вопросу</v8:content>
+								</v8:item>
+							</mf:collapsedTitle>
+							<mf:collapsed>true</mf:collapsed>
+						</mf:usualData>
+						<mf:field name="ПолеКартинка" kind="PictureField" dataPath="РеквизитКартинка">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="ПолеКартинкаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:imageData>
+								<mf:pictureSize>Proportionally</mf:pictureSize>
+							</mf:imageData>
+						</mf:field>
+						<mf:group name="Группа4" type="UsualGroup">
+							<mf:usualData representation="None">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:button name="КнопкаДобавитьКартинку" type="UsualButton" commandName="Form.Command.ДобавитьКартинку">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Добавить картинку</v8:content>
+									</v8:item>
+								</mf:title>
+							</mf:button>
+							<mf:button name="КнопкаУдалитьКартинку" type="UsualButton" commandName="Form.Command.УдалитьКартинку">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удалить картинку</v8:content>
+									</v8:item>
+								</mf:title>
+							</mf:button>
+						</mf:group>
+					</mf:group>
+					<mf:group name="ГруппаПодсказка" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа подсказка</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа подсказка</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="Комментарий" kind="InputField" dataPath="Объект.Комментарий">
+							<mf:contextMenu name="КомментарийКонтекстноеМеню" type="ContextMenu"/>
+							<mf:inputData>
+								<mf:multiLine>true</mf:multiLine>
+								<mf:width>50</mf:width>
+							</mf:inputData>
+						</mf:field>
+						<mf:group name="Группа2" type="UsualGroup">
+							<mf:usualData group="Vertical" representation="None">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="КартинкаПодсказки" kind="InputField" dataPath="Объект.КартинкаПодсказки">
+								<mf:contextMenu name="КартинкаПодсказкиКонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="КартинкаПодсказкиПриИзменении" name="OnChange"/>
+							</mf:field>
+							<mf:field name="ИзображениеПодсказки" kind="PictureField" dataPath="АдресКартинкиПодсказки">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="ИзображениеПодсказкиКонтекстноеМеню" type="ContextMenu"/>
+								<mf:imageData>
+									<mf:pictureSize>Proportionally</mf:pictureSize>
+								</mf:imageData>
+							</mf:field>
+						</mf:group>
+					</mf:group>
 				</mf:mainElement>
 			</form>
 		</form>
@@ -1741,6 +1861,98 @@
 							<mf:inputData>
 								<mf:multiLine>true</mf:multiLine>
 							</mf:inputData>
+						</mf:field>
+					</mf:table>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаСпискаМоя" id="2565f680-ae90-44f0-b78e-a8c6546e47ab">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма списка моя</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Catalog.ВопросыИОтветы</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+							<mf:order>
+								<dcsset:item xsi:type="dcsset:OrderItemField">
+									<dcsset:field>Владелец.НомерРаздела</dcsset:field>
+									<dcsset:orderType>Asc</dcsset:orderType>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:OrderItemField">
+									<dcsset:field>НомерВопроса</dcsset:field>
+									<dcsset:orderType>Asc</dcsset:orderType>
+								</dcsset:item>
+								<dcsset:viewMode>Normal</dcsset:viewMode>
+								<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+							</mf:order>
+							<mf:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Владелец.НомерРаздела</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</mf:groupItems>
+							<mf:requiredField>НомерВопроса</mf:requiredField>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:representation>Tree</mf:representation>
+						<mf:changeRowOrder>false</mf:changeRowOrder>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:showRoot>false</mf:showRoot>
+						<mf:field name="НомерВопроса" kind="LabelField" dataPath="Список.НомерВопроса" defaultItem="true">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:contextMenu name="НомерВопросаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Вопрос" kind="LabelField" dataPath="Список.Ref" defaultItem="true">
+							<mf:contextMenu name="ВопросКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="КартинкаПодсказки" kind="LabelField" dataPath="Список.КартинкаПодсказки">
+							<mf:contextMenu name="КартинкаПодсказкиКонтекстноеМеню" type="ContextMenu"/>
 						</mf:field>
 					</mf:table>
 				</mf:mainElement>
@@ -2190,7 +2402,9 @@
 		<descriptionLength>50</descriptionLength>
 		<inputByString>Description</inputByString>
 		<inputByString>Code</inputByString>
+		<defaultChoiceForm>Catalog.ВопросыИОтветыПрисоединенныеФайлы.Form.ФормаВыбора</defaultChoiceForm>
 		<defaultObjectForm>Catalog.ВопросыИОтветыПрисоединенныеФайлы.Form.ФормаЭлемента</defaultObjectForm>
+		<defaultListForm>Catalog.ВопросыИОтветыПрисоединенныеФайлы.Form.ФормаСписка</defaultListForm>
 		<objectPresentation>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -2246,6 +2460,22 @@
 			</type>
 			<fillingValue xsi:type="xs:string"/>
 		</attribute>
+		<attribute name="ХешСтрока" id="1007b6ac-7b89-410d-aedd-df0d0a7ca10a">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хеш строка</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</type>
+			<fillingValue xsi:type="xs:string"/>
+		</attribute>
 		<form name="ФормаЭлемента" id="a82b283a-75f5-44b9-9775-b1033dc798c3">
 			<synonym>
 				<v8:item>
@@ -2254,16 +2484,19 @@
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="77">
-					<bsch:cmdOpCode>1,2,12,65,29,40,1,2,2,12,4,18,19,5,1,16,39,1,1,22,1,2,40,1,2,18,19,5,1,40,1,3,2,18,19,5,1,16,1,3,12,3,18,51,16,39,1,39,1,1,22,1,2,18,19,5,1,40,1,2,18,19,1,1,2,3,12,4,18,19,5,1,16,39,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>6,0,0,0,0,17,9,1,0,1,2,2,1,0,9,0,17,12,14,0,19,2,48,21,1,1,3,0,21,46,23,3,1,1,4,0,23,0,25,1,2,3,1,3,0,46,30,48,33,34,0,41,1,1,3,0,41,74,45,1,1,6,45,46,1,1,1,2,2,1,0,46,0,74,50,52,0,0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="87">
+					<bsch:cmdOpCode>1,2,12,65,29,40,1,2,2,12,4,18,19,5,1,16,39,1,1,22,1,2,40,1,2,18,19,5,1,40,1,3,2,18,19,5,1,16,1,3,12,3,18,51,16,1,3,12,2,2,18,21,5,1,16,39,1,39,1,1,22,1,2,18,19,5,1,40,1,2,18,19,1,1,2,3,12,4,18,19,5,1,16,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>6,0,0,0,0,17,9,1,0,1,2,2,1,0,9,0,17,12,14,0,19,2,58,21,1,1,3,0,21,56,23,3,1,1,4,0,23,0,25,1,2,3,1,3,0,26,1,4,3,1,1,5,0,26,0,56,30,58,33,34,0,41,1,1,3,0,41,84,45,1,1,6,45,46,1,1,1,2,2,1,0,46,0,84,50,52,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SИмяФайла</bsch:constant>
 					<bsch:constant>SСсылка</bsch:constant>
 					<bsch:constant>SСодержимоеФайла</bsch:constant>
 					<bsch:constant>SХранилищеЗначения</bsch:constant>
+					<bsch:constant>SХешСтрока</bsch:constant>
+					<bsch:constant>SПолучитьХешФайла</bsch:constant>
 					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:variable name="АдресКартинки" isExternal="true"/>
 					<bsch:variable name="КартинкаИзменена" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначения" isExternal="true"/>
 					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
 						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
@@ -2282,7 +2515,7 @@
 					</bsch:procedure>
 					<bsch:procedure name="ЭтоАдресВременногоХранилища" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 					<bsch:procedure name="ПолучитьИзВременногоХранилища" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="ПриЗаписиНаСервере" parametersCount="3" startAddr="51">
+					<bsch:procedure name="ПриЗаписиНаСервере" parametersCount="3" startAddr="61">
 						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 						<bsch:variable name="ТекущийОбъект" isLocal="true" isParam="true"/>
 						<bsch:variable name="ПараметрыЗаписи" isLocal="true" isParam="true"/>
@@ -2292,9 +2525,9 @@
 					</bsch:procedure>
 					<bsch:procedure name="УдалитьИзВременногоХранилища" isExternal="true" parametersCount="1" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="108">
-					<bsch:cmdOpCode>1,3,4,2,18,51,16,1,3,2,12,16,1,3,3,18,51,16,1,3,12,4,16,1,3,4,18,19,5,1,4,24,16,1,3,12,3,16,1,3,12,6,16,1,3,12,4,16,1,3,12,4,16,1,3,10,3,7,2,18,19,1,1,22,1,3,40,1,3,3,18,51,16,1,2,3,16,1,2,12,3,12,16,1,2,12,3,12,16,1,2,7,16,1,2,7,16,39,1,1,22,1,8,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>66,1,0,0,2,1,0,69,2,1,2,0,70,3,2,1,3,0,71,3,4,5,0,72,4,6,1,1,0,72,7,0,0,74,3,8,4,0,75,3,9,0,0,76,3,10,11,0,77,3,12,13,0,81,1,0,3,0,2,5,2,81,83,0,92,0,98,94,4,2,1,14,0,95,3,1,0,96,4,15,4,16,0,97,4,17,4,18,0,98,5,0,0,99,6,0,0,98,101,103,0,107,0,1,0,107,108,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="132">
+					<bsch:cmdOpCode>1,3,4,2,18,51,16,1,3,2,12,16,1,3,3,18,51,16,1,3,12,4,16,1,3,4,18,19,5,1,4,24,16,1,3,12,3,16,1,3,12,6,16,1,3,12,2,18,21,5,1,16,1,3,12,4,16,1,3,10,3,7,2,18,19,1,1,22,1,3,40,1,3,3,18,51,16,1,2,3,12,18,20,1,1,2,3,16,1,2,12,3,12,16,1,2,12,3,12,16,1,2,7,16,1,2,7,16,1,2,12,65,40,1,2,12,3,12,16,39,1,39,1,1,22,1,8,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>66,1,0,0,2,1,0,69,2,1,2,0,70,3,2,1,3,0,71,3,4,5,0,72,4,6,1,1,0,72,7,0,0,74,3,8,4,0,75,3,9,0,0,76,3,10,2,0,11,0,76,0,77,3,12,13,0,81,1,0,3,0,3,5,2,81,83,0,94,0,122,96,4,2,1,14,0,97,2,4,16,1,15,97,98,4,1,0,99,5,17,4,18,0,100,5,19,4,20,0,102,6,0,0,103,7,0,0,104,5,21,0,120,106,5,21,4,22,0,120,108,122,110,112,0,116,0,1,0,116,117,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SОкончаниеДобавленияКартинки</bsch:constant>
 					<bsch:constant>SОписаниеОповещения</bsch:constant>
 					<bsch:constant>SОткрытие</bsch:constant>
@@ -2306,16 +2539,21 @@
 					<bsch:constant>SФильтр</bsch:constant>
 					<bsch:constant>SМножественныйВыбор</bsch:constant>
 					<bsch:constant>SКаталог</bsch:constant>
-					<bsch:constant>SZ:/temp</bsch:constant>
+					<bsch:constant>SПолучитьКатлогЗагрузкиКартинок</bsch:constant>
 					<bsch:constant>SЗаголовок</bsch:constant>
 					<bsch:constant>SВыберите картинку</bsch:constant>
 					<bsch:constant>SФайл</bsch:constant>
+					<bsch:constant>SЗаписатьКаталогЗагрузкиКартинок</bsch:constant>
+					<bsch:constant>SПуть</bsch:constant>
 					<bsch:constant>SРасширениеФайла</bsch:constant>
 					<bsch:constant>SРасширение</bsch:constant>
 					<bsch:constant>SИмяФайла</bsch:constant>
 					<bsch:constant>SИмя</bsch:constant>
+					<bsch:constant>SНаименование</bsch:constant>
+					<bsch:constant>SИмяБезРасширения</bsch:constant>
 					<bsch:variable name="ЭтаФорма" isExternal="true"/>
 					<bsch:variable name="РежимДиалогаВыбораФайла" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияВызовСервера" isExternal="true"/>
 					<bsch:variable name="УникальныйИдентификатор" isExternal="true"/>
 					<bsch:variable name="АдресКартинки" isExternal="true"/>
 					<bsch:variable name="Объект" isExternal="true"/>
@@ -2331,7 +2569,7 @@
 					</bsch:procedure>
 					<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="НачатьПомещениеФайла" isExternal="true" parametersCount="5" startAddr="0"/>
-					<bsch:procedure name="ОкончаниеДобавленияКартинки" isExported="true" parametersCount="4" startAddr="64">
+					<bsch:procedure name="ОкончаниеДобавленияКартинки" isExported="true" parametersCount="4" startAddr="68">
 						<bsch:variable name="Результат" isLocal="true" isParam="true"/>
 						<bsch:variable name="Адрес" isLocal="true" isParam="true"/>
 						<bsch:variable name="ВыбранноеИмяФайла" isLocal="true" isParam="true"/>
@@ -2342,7 +2580,7 @@
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="КартинкаНажатие" parametersCount="2" startAddr="101">
+					<bsch:procedure name="КартинкаНажатие" parametersCount="2" startAddr="125">
 						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -2391,6 +2629,21 @@
 							<v8:Type>xs:boolean</v8:Type>
 						</mf:type>
 					</mf:attribute>
+					<mf:attribute name="КаталогЗагрузкиКартинок">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Каталог загрузки картинок</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
 				</mf:attributes>
 				<mf:command name="ДобавитьКартинку">
 					<mf:title>
@@ -2419,12 +2672,17 @@
 					<mf:field name="Наименование" kind="InputField" dataPath="Объект.Description">
 						<mf:contextMenu name="НаименованиеКонтекстноеМеню" type="ContextMenu"/>
 					</mf:field>
-					<mf:field name="ИмяФайла" kind="LabelField" dataPath="Объект.ИмяФайла">
-						<mf:contextMenu name="ИмяФайлаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
-					<mf:field name="РасширениеФайла" kind="LabelField" dataPath="Объект.РасширениеФайла">
-						<mf:contextMenu name="РасширениеФайлаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:usualData group="AlwaysHorizontal" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="ИмяФайла" kind="InputField" dataPath="Объект.ИмяФайла">
+							<mf:contextMenu name="ИмяФайлаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="ХешСтрока" kind="LabelField" dataPath="Объект.ХешСтрока">
+							<mf:contextMenu name="ХешСтрокаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:group>
 					<mf:button name="ДобавитьКартинку" type="UsualButton" commandName="Form.Command.ДобавитьКартинку"/>
 					<mf:field name="Картинка" kind="PictureField" dataPath="АдресКартинки">
 						<mf:titleLocation>None</mf:titleLocation>
@@ -2432,6 +2690,220 @@
 						<mf:imageData>
 							<mf:pictureSize>Proportionally</mf:pictureSize>
 							<mf:event handler="КартинкаНажатие" name="Click"/>
+						</mf:imageData>
+					</mf:field>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаВыбора" id="f07abf88-0d10-4b7f-9763-e2c650c2ecf1">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма выбора</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="12">
+					<bsch:cmdOpCode>1,2,3,12,4,18,19,5,1,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>6,0,0,0,1,2,1,0,6,0,8,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SТекущаяСтрока</bsch:constant>
+					<bsch:constant>SСодержимоеФайла</bsch:constant>
+					<bsch:variable name="АдресКартинки" isExternal="true"/>
+					<bsch:procedure name="СписокПриАктивизацииСтроки" parametersCount="1" startAddr="0">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПолучитьНавигационнуюСсылку" isFunction="true" isExternal="true" parametersCount="3" startAddr="0"/>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Catalog.ВопросыИОтветыПрисоединенныеФайлы</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="АдресКартинки">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адрес картинки</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:windowOpeningMode>LockOwnerWindow</mf:windowOpeningMode>
+					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа пользовательских настроек</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:verticalStretch>false</mf:verticalStretch>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+					</mf:group>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:representation>List</mf:representation>
+						<mf:choiceMode>true</mf:choiceMode>
+						<mf:initialTreeView>ExpandTopLevel</mf:initialTreeView>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:event handler="СписокПриАктивизацииСтроки" name="OnActivateRow"/>
+						<mf:field name="Наименование" kind="LabelField" dataPath="Список.Description" defaultItem="true">
+							<mf:contextMenu name="НаименованиеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Код" kind="LabelField" dataPath="Список.Code">
+							<mf:contextMenu name="КодКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:table>
+					<mf:field name="АдресКартинки" kind="PictureField" dataPath="АдресКартинки">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="АдресКартинкиКонтекстноеМеню" type="ContextMenu"/>
+						<mf:imageData>
+							<mf:pictureSize>Proportionally</mf:pictureSize>
+						</mf:imageData>
+					</mf:field>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаСписка" id="e5da2c73-ee49-449f-8b95-6e11269f66be">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма списка</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="12">
+					<bsch:cmdOpCode>1,2,3,12,4,18,19,5,1,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>4,0,0,0,1,2,1,0,4,0,5,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SТекущаяСтрока</bsch:constant>
+					<bsch:constant>SСодержимоеФайла</bsch:constant>
+					<bsch:variable name="АдресКартинки" isExternal="true"/>
+					<bsch:procedure name="СписокПриАктивизацииСтроки" parametersCount="1" startAddr="0">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПолучитьНавигационнуюСсылку" isFunction="true" isExternal="true" parametersCount="3" startAddr="0"/>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Catalog.ВопросыИОтветыПрисоединенныеФайлы</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="АдресКартинки">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адрес картинки</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа пользовательских настроек</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:verticalStretch>false</mf:verticalStretch>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+					</mf:group>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:representation>List</mf:representation>
+						<mf:initialTreeView>ExpandTopLevel</mf:initialTreeView>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:event handler="СписокПриАктивизацииСтроки" name="OnActivateRow"/>
+						<mf:field name="Наименование" kind="LabelField" dataPath="Список.Description" defaultItem="true">
+							<mf:contextMenu name="НаименованиеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Код" kind="LabelField" dataPath="Список.Code">
+							<mf:contextMenu name="КодКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="ИмяФайла" kind="LabelField" dataPath="Список.ИмяФайла">
+							<mf:contextMenu name="ИмяФайлаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="ХешСтрока" kind="LabelField" dataPath="Список.ХешСтрока">
+							<mf:contextMenu name="ХешСтрокаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:table>
+					<mf:field name="Картинка" kind="PictureField" dataPath="АдресКартинки">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="КартинкаКонтекстноеМеню" type="ContextMenu"/>
+						<mf:imageData>
+							<mf:pictureSize>Proportionally</mf:pictureSize>
 						</mf:imageData>
 					</mf:field>
 				</mf:mainElement>
@@ -12351,6 +12823,466 @@
 						</mf:formattedTitle>
 						<mf:contextMenu name="Декорация1КонтекстноеМеню" type="ContextMenu"/>
 					</mf:decoration>
+				</mf:mainElement>
+			</form>
+		</form>
+	</dataProcessor>
+	<dataProcessor name="ЗагрузкаКартинок" id="5a0e932a-8e56-478b-b852-a0ab048e117c">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Загрузка картинок</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="DataProcessorObject.ЗагрузкаКартинок" category="Object">
+			<xr:TypeId>a4d3b247-c703-4efb-9490-4310e424c327</xr:TypeId>
+			<xr:ValueId>e852fb86-498a-4d8e-ac8d-5e27c4683df3</xr:ValueId>
+		</generatedType>
+		<generatedType name="DataProcessorManager.ЗагрузкаКартинок" category="Manager">
+			<xr:TypeId>6074933e-4afa-40f1-9727-7bbc90006aa3</xr:TypeId>
+			<xr:ValueId>29ecadfd-4373-487c-99bf-1227b7d746a2</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</objectModule>
+		<defaultForm>DataProcessor.ЗагрузкаКартинок.Form.Форма</defaultForm>
+		<tabularSection name="СписокКартинок" id="af03b5eb-b5c1-4243-9fd6-8f776a0c3043">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список картинок</v8:content>
+				</v8:item>
+			</synonym>
+			<generatedType name="DataProcessorTabularSection.ЗагрузкаКартинок.СписокКартинок" category="TabularSection">
+				<xr:TypeId>9a73b625-3fa1-4f30-9ee5-456dab034a7d</xr:TypeId>
+				<xr:ValueId>440e9ac9-0840-48f1-9aa5-e6318705196f</xr:ValueId>
+			</generatedType>
+			<generatedType name="DataProcessorTabularSectionRow.ЗагрузкаКартинок.СписокКартинок" category="TabularSectionRow">
+				<xr:TypeId>2858d494-fa7b-4263-901e-7dd849e443ac</xr:TypeId>
+				<xr:ValueId>ac5058b5-12cb-4bae-b93e-25e055fde27f</xr:ValueId>
+			</generatedType>
+			<attribute name="ИмяФайла" id="ad2b6b39-e8f0-40f0-befc-03a0f2af6d2c">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Имя файла</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</type>
+				<fillingValue xsi:type="xs:string"/>
+			</attribute>
+			<attribute name="Наименование" id="e175de2b-3e61-49f5-8549-7d9add3745be">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Наименование</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</type>
+				<fillingValue xsi:type="xs:string"/>
+			</attribute>
+			<attribute name="Записать" id="815fe1a1-d344-4c61-b982-c994d3dd4aa1">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Записать</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>xs:boolean</v8:Type>
+				</type>
+			</attribute>
+			<attribute name="АдресХранилища" id="44d913eb-6db0-4ab2-ba20-4cd87579e417">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Адрес хранилища</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>100</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</type>
+				<fillingValue xsi:type="xs:string"/>
+			</attribute>
+			<attribute name="ХешСтрока" id="ddb73675-22c5-462d-a7bd-f26f4e2eb538">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Хеш строка</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>50</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</type>
+				<fillingValue xsi:type="xs:string"/>
+			</attribute>
+			<attribute name="КартинкаВБазе" id="0c5fd3d6-6b8b-41be-8b83-607ea5abcb3a">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Картинка в базе</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>cfg:CatalogRef.ВопросыИОтветыПрисоединенныеФайлы</v8:Type>
+				</type>
+			</attribute>
+			<attribute name="РасширениеФайла" id="3aa8dc57-396d-41aa-9a5d-fd9576034e63">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расширение файла</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>10</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</type>
+				<fillingValue xsi:type="xs:string"/>
+			</attribute>
+			<attribute name="Вопрос" id="45c5286e-b318-41d9-b1d5-67e698c994c0">
+				<synonym>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вопрос</v8:content>
+					</v8:item>
+				</synonym>
+				<type>
+					<v8:Type>cfg:CatalogRef.ВопросыИОтветы</v8:Type>
+				</type>
+			</attribute>
+		</tabularSection>
+		<form name="Форма" id="640716fd-521f-4989-98a8-7633b12dd112">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="315">
+					<bsch:cmdOpCode>1,2,12,12,6,16,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,2,12,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,18,21,5,1,16,1,3,2,3,12,18,21,5,1,16,1,3,3,12,18,51,16,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,7,16,1,3,12,3,12,16,1,3,12,3,16,1,2,12,4,3,12,18,20,1,1,3,18,20,1,1,3,3,4,18,21,5,1,40,1,3,12,6,16,1,3,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,1,22,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,39,50,3,8,16,3,8,16,1,22,1,48,49,2,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,40,1,3,2,12,18,21,5,1,16,1,3,3,18,19,1,1,3,3,12,18,19,5,1,16,1,3,12,3,18,51,16,1,3,18,20,1,1,3,12,2,12,18,21,5,1,34,40,1,3,3,12,18,21,5,1,16,1,3,12,2,12,18,21,5,1,33,40,1,3,12,3,12,16,1,3,18,20,1,39,1,39,1,39,1,1,39,50,3,8,16,3,8,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>9,0,0,1,0,0,10,0,75,1,0,2,0,76,1,3,4,0,84,2,1,0,5,0,84,0,86,3,2,0,6,0,86,0,88,1,7,0,8,88,90,0,0,0,0,0,90,5,0,0,5,0,157,4,5,0,5,0,0,92,6,1,7,0,9,0,92,0,98,7,2,4,11,1,10,0,98,0,99,8,4,12,1,13,0,101,6,14,4,15,0,102,6,16,8,17,0,103,6,18,8,19,0,104,6,20,0,0,105,6,21,4,11,0,106,6,22,7,0,109,3,23,25,8,26,2,24,109,111,3,0,27,111,112,3,7,22,2,28,0,112,154,114,6,20,0,0,115,6,29,3,30,0,154,116,118,46,1,5,0,0,5,0,0,120,0,133,0,0,0,0,0,133,2,0,0,2,0,187,1,2,0,2,0,0,137,172,1,2,0,0,2,0,0,139,0,149,0,0,1,7,0,0,149,1,0,0,1,0,306,0,1,0,1,0,0,151,0,20,303,153,2,4,31,0,32,0,153,0,154,2,0,2,4,154,157,3,0,21,1,5,0,157,0,158,2,33,3,1,34,0,160,2,0,20,160,163,0,35,4,36,0,37,0,163,0,301,165,4,0,35,0,38,0,165,0,167,4,39,4,31,0,37,0,167,0,299,169,4,39,2,30,0,170,4,0,20,170,299,172,301,174,303,176,179,203,1,1,0,0,1,0,0,180,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SОписание</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>SЗапрос</bsch:constant>
+					<bsch:constant>SТекст</bsch:constant>
+					<bsch:constant>SВЫБРАТЬ
+	ВопросыИОтветыПрисоединенныеФайлы.Ссылка КАК Ссылка,
+	ВопросыИОтветыПрисоединенныеФайлы.ИмяФайла КАК ИмяФайла,
+	ВопросыИОтветыПрисоединенныеФайлы.ХешСтрока КАК ХешСтрока
+ИЗ
+	Справочник.ВопросыИОтветыПрисоединенныеФайлы КАК ВопросыИОтветыПрисоединенныеФайлы</bsch:constant>
+					<bsch:constant>SВыполнить</bsch:constant>
+					<bsch:constant>SВыбрать</bsch:constant>
+					<bsch:constant>SСписокКартинок</bsch:constant>
+					<bsch:constant>SОчистить</bsch:constant>
+					<bsch:constant>SДобавить</bsch:constant>
+					<bsch:constant>SПолучитьХешФайла</bsch:constant>
+					<bsch:constant>SХранение</bsch:constant>
+					<bsch:constant>SПолноеИмя</bsch:constant>
+					<bsch:constant>SФайл</bsch:constant>
+					<bsch:constant>SИмяФайла</bsch:constant>
+					<bsch:constant>SИмя</bsch:constant>
+					<bsch:constant>SРасширениеФайла</bsch:constant>
+					<bsch:constant>SРасширение</bsch:constant>
+					<bsch:constant>SНаименование</bsch:constant>
+					<bsch:constant>SИмяБезРасширения</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SАдресХранилища</bsch:constant>
+					<bsch:constant>SХешСтрока</bsch:constant>
+					<bsch:constant>SХранилищеНастроек</bsch:constant>
+					<bsch:constant>SЗаписатьНастройку</bsch:constant>
+					<bsch:constant>SКаталогЗагрузкиКартинок</bsch:constant>
+					<bsch:constant>SПуть</bsch:constant>
+					<bsch:constant>SСбросить</bsch:constant>
+					<bsch:constant>SНайтиСледующий</bsch:constant>
+					<bsch:constant>SКартинкаВБазе</bsch:constant>
+					<bsch:constant>SСсылка</bsch:constant>
+					<bsch:constant>SВопросыИОтветыПрисоединенныеФайлы</bsch:constant>
+					<bsch:constant>SСоздатьЭлемент</bsch:constant>
+					<bsch:constant>SСодержимоеФайла</bsch:constant>
+					<bsch:constant>SХранилищеЗначения</bsch:constant>
+					<bsch:constant>SВопрос</bsch:constant>
+					<bsch:constant>SВопросыИОтветы</bsch:constant>
+					<bsch:constant>SПустаяСсылка</bsch:constant>
+					<bsch:constant>SПолучитьОбъект</bsch:constant>
+					<bsch:constant>SКартинкаПодсказки</bsch:constant>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначения" isExternal="true"/>
+					<bsch:variable name="РегистрыСведений" isExternal="true"/>
+					<bsch:variable name="Справочники" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоместитьФайлыСервер" parametersCount="1" startAddr="8">
+						<bsch:variable name="ПомещенныеФайлы" isLocal="true" isParam="true"/>
+						<bsch:variable name="Запрос" isLocal="true"/>
+						<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+						<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+						<bsch:variable name="ОписаниеФайла" isLocal="true"/>
+						<bsch:variable name="0ОписаниеФайла" isLocal="true"/>
+						<bsch:variable name="НоваяСтрокаТЧ" isLocal="true"/>
+						<bsch:variable name="ХешСтрока" isLocal="true"/>
+						<bsch:variable name="Файл" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗагрузитьФайлыКартинок" parametersCount="1" startAddr="166">
+						<bsch:variable name="НайденныеФайлы" isLocal="true" isParam="true"/>
+						<bsch:variable name="Файл" isLocal="true"/>
+						<bsch:variable name="0Файл" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаписатьКартинкиНаСервере" parametersCount="0" startAddr="196">
+						<bsch:variable name="СтрокаТЧ" isLocal="true"/>
+						<bsch:variable name="0СтрокаТЧ" isLocal="true"/>
+						<bsch:variable name="Картинка" isLocal="true"/>
+						<bsch:variable name="ДвоичныеДанные" isLocal="true"/>
+						<bsch:variable name="ВопросОбъект" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаполнитьЗначенияСвойств" isExternal="true" parametersCount="4" startAddr="0"/>
+					<bsch:procedure name="ПолучитьИзВременногоХранилища" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="107">
+					<bsch:cmdOpCode>1,3,4,2,18,51,16,1,3,2,12,16,1,3,3,18,51,16,1,3,12,4,16,1,3,4,18,19,5,1,4,24,16,1,3,12,3,16,1,3,12,7,16,1,3,12,2,18,21,5,1,16,1,3,12,4,16,1,3,3,7,2,18,19,1,1,22,1,3,18,19,1,1,22,1,18,19,1,1,22,1,3,12,8,34,40,1,2,3,12,12,16,39,1,1,22,1,2,12,12,2,12,12,29,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>33,1,0,0,2,1,0,36,2,1,2,0,37,3,2,1,3,0,38,3,4,5,0,39,4,6,1,1,0,39,7,0,0,41,3,8,4,0,42,3,9,0,0,43,3,10,2,0,11,0,43,0,44,3,12,13,0,46,1,3,0,3,4,2,46,48,0,60,0,1,4,60,70,0,184,0,6,184,185,0,190,0,14,0,0,93,192,4,0,14,15,0,93,194,197,0,202,5,16,17,5,16,17,0,0,203,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SОкончаниеПомещенияФайлов</bsch:constant>
+					<bsch:constant>SОписаниеОповещения</bsch:constant>
+					<bsch:constant>SОткрытие</bsch:constant>
+					<bsch:constant>SДиалогВыбораФайла</bsch:constant>
+					<bsch:constant>SПолноеИмяФайла</bsch:constant>
+					<bsch:constant>S</bsch:constant>
+					<bsch:constant>Sru = 'Изображение'; en = 'Image'</bsch:constant>
+					<bsch:constant>S(*.jpeg;*.jpg;*.png)|*.jpeg;*.jpg;*.png</bsch:constant>
+					<bsch:constant>SФильтр</bsch:constant>
+					<bsch:constant>SМножественныйВыбор</bsch:constant>
+					<bsch:constant>SКаталог</bsch:constant>
+					<bsch:constant>SПолучитьКатлогЗагрузкиКартинок</bsch:constant>
+					<bsch:constant>SЗаголовок</bsch:constant>
+					<bsch:constant>SВыберите картинки</bsch:constant>
+					<bsch:constant>SТекущиеДанные</bsch:constant>
+					<bsch:constant>SАдресХранилища</bsch:constant>
+					<bsch:constant>SОписание</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:variable name="РежимДиалогаВыбораФайла" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияВызовСервера" isExternal="true"/>
+					<bsch:variable name="УникальныйИдентификатор" isExternal="true"/>
+					<bsch:variable name="АдресКартинки" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:procedure name="ЗагрузитьКартинки" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="ОкончаниеПомещенияФайлов" isLocal="true"/>
+						<bsch:variable name="Режим" isLocal="true"/>
+						<bsch:variable name="ДиалогОткрытияФайла" isLocal="true"/>
+						<bsch:variable name="Фильтр" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="НачатьПомещениеФайлов" isExternal="true" parametersCount="5" startAddr="0"/>
+					<bsch:procedure name="ОкончаниеПомещенияФайлов" isExported="true" parametersCount="2" startAddr="67">
+						<bsch:variable name="ПомещенныеФайлы" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоместитьФайлыСервер" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="ЗаписатьКартинки" parametersCount="1" startAddr="74">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаписатьКартинкиНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="СписокКартинокПриАктивизацииСтроки" parametersCount="1" startAddr="80">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоказатьОписаниеНажатие" parametersCount="1" startAddr="96">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>1,2,12,4,3,18,20,1,1,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>144,0,0,2,0,2,1,144,145,0,0</bsch:cmdOperand>
+					<bsch:constant>SХранилищеНастроек</bsch:constant>
+					<bsch:constant>SЗаписатьНастройку</bsch:constant>
+					<bsch:constant>SКаталогЗагрузкиКартинок</bsch:constant>
+					<bsch:variable name="РегистрыСведений" isExternal="true"/>
+					<bsch:procedure name="КаталогКартинокПриИзмененииНаСервере" parametersCount="1" startAddr="0">
+						<bsch:variable name="КаталогКартинок" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:TypeId>a4d3b247-c703-4efb-9490-4310e424c327</v8:TypeId>
+						</mf:type>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="АдресКартинки">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адрес картинки</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="ЗагрузитьКартинки">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить картинки</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗагрузитьКартинки</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить картинки</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="ЗаписатьКартинки">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать картинки</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗаписатьКартинки</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать картинки</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+						<mf:button name="ЗагрузитьКартинки" type="CommandBarButton" commandName="Form.Command.ЗагрузитьКартинки"/>
+						<mf:button name="ФормаЗаписатьКартинки" type="CommandBarButton" commandName="Form.Command.ЗаписатьКартинки"/>
+					</mf:autoCommandBar>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:decoration name="ПоказатьОписание" type="Label">
+						<mf:formattedTitle>
+							<mf:str>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание</v8:content>
+								</v8:item>
+							</mf:str>
+						</mf:formattedTitle>
+						<mf:contextMenu name="ПоказатьОписаниеКонтекстноеМеню" type="ContextMenu"/>
+						<mf:textData hyperlink="true">
+							<mf:event handler="ПоказатьОписаниеНажатие" name="Click"/>
+						</mf:textData>
+					</mf:decoration>
+					<mf:decoration name="Описание" type="Label">
+						<mf:formattedTitle>
+							<mf:str>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузка картинок подсказок. Нажмите Загрузить картинки, выберите загружаемые картинки. Картинки отобразятся в таблице. Дубли картинок определяются по содержимому файла (хешу).
+Отредактируйте по необходимости таблицу: Записать - картинка запишется в базу, Наименование. Если укажете вопрос, к нему привяжется загружаемая картинка.Картинка в базе - найденная в базе такая же картинка, как загружаемая.</v8:content>
+								</v8:item>
+							</mf:str>
+						</mf:formattedTitle>
+						<mf:autoMaxWidth>false</mf:autoMaxWidth>
+						<mf:contextMenu name="ОписаниеКонтекстноеМеню" type="ContextMenu"/>
+					</mf:decoration>
+					<mf:table name="СписокКартинок" dataPath="Объект.СписокКартинок">
+						<mf:autoInsertNewRow>true</mf:autoInsertNewRow>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКартинокКоманднаяПанель" type="AutoCommandBar"/>
+						<mf:contextMenu name="СписокКартинокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:event handler="СписокКартинокПриАктивизацииСтроки" name="OnActivateRow"/>
+						<mf:field name="СписокКартинокНомерСтроки" kind="LabelField" dataPath="Объект.СписокКартинок.LineNumber">
+							<mf:contextMenu name="СписокКартинокНомерСтрокиКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="СписокКартинокЗагружать" kind="CheckBoxField" dataPath="Объект.СписокКартинок.Записать">
+							<mf:contextMenu name="СписокКартинокЗагружатьКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="СписокКартинокИмяФайла" kind="InputField" dataPath="Объект.СписокКартинок.ИмяФайла">
+							<mf:contextMenu name="СписокКартинокИмяФайлаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="СписокКартинокНаименование" kind="InputField" dataPath="Объект.СписокКартинок.Наименование">
+							<mf:contextMenu name="СписокКартинокНаименованиеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="СписокКартинокВопрос" kind="InputField" dataPath="Объект.СписокКартинок.Вопрос">
+							<mf:contextMenu name="СписокКартинокВопросКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="СписокКартинокКартинкаВБазе" kind="InputField" dataPath="Объект.СписокКартинок.КартинкаВБазе">
+							<mf:contextMenu name="СписокКартинокКартинкаВБазеКонтекстноеМеню" type="ContextMenu"/>
+							<mf:cellHyper>true</mf:cellHyper>
+							<mf:inputData>
+								<mf:textEdit>false</mf:textEdit>
+								<mf:choiceButton>false</mf:choiceButton>
+								<mf:dropListButton>false</mf:dropListButton>
+								<mf:clearButton>false</mf:clearButton>
+								<mf:spinButton>false</mf:spinButton>
+								<mf:openButton>true</mf:openButton>
+								<mf:createButton>false</mf:createButton>
+								<mf:autoShowOpenButtonMode>FilledOnly</mf:autoShowOpenButtonMode>
+								<mf:editTextUpdate>OnValueChange</mf:editTextUpdate>
+								<mf:choiceHistoryOnInput>DontUse</mf:choiceHistoryOnInput>
+							</mf:inputData>
+						</mf:field>
+						<mf:field name="СписокКартинокХешСтрока" kind="InputField" dataPath="Объект.СписокКартинок.ХешСтрока">
+							<mf:contextMenu name="СписокКартинокХешСтрокаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:table>
+					<mf:field name="АдресКартинки" kind="PictureField" dataPath="АдресКартинки">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="АдресКартинкиКонтекстноеМеню" type="ContextMenu"/>
+						<mf:imageData>
+							<mf:pictureSize>Proportionally</mf:pictureSize>
+						</mf:imageData>
+					</mf:field>
 				</mf:mainElement>
 			</form>
 		</form>
